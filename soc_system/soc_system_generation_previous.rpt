@@ -1,0 +1,223 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\vc\InnovateFPGA\FPGA\DE10_Nano_D8M_DDR3\soc_system.qsys --synthesis=VERILOG --output-directory=D:\vc\InnovateFPGA\FPGA\DE10_Nano_D8M_DDR3\soc_system\synthesis --family="Cyclone V" --part=5CSEBA6U23I7
+Progress: Loading DE10_Nano_D8M_DDR3/soc_system.qsys
+Progress: Reading input file
+Progress: Adding TERASIC_CAMERA_0 [TERASIC_CAMERA 1.0]
+Progress: Parameterizing module TERASIC_CAMERA_0
+Progress: Adding alt_vip_cl_vfb_0 [alt_vip_cl_vfb 18.1]
+Progress: Parameterizing module alt_vip_cl_vfb_0
+Progress: Adding alt_vip_cl_vfb_gmm [alt_vip_cl_vfb 18.1]
+Progress: Parameterizing module alt_vip_cl_vfb_gmm
+Progress: Adding alt_vip_itc_0 [alt_vip_itc 14.0]
+Progress: Parameterizing module alt_vip_itc_0
+Progress: Adding clk_50 [clock_source 18.1]
+Progress: Parameterizing module clk_50
+Progress: Adding cpu [altera_nios2_gen2 18.1]
+Progress: Parameterizing module cpu
+Progress: Adding cpu_ram [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module cpu_ram
+Progress: Adding dc_fifo_from_gmm [altera_avalon_dc_fifo 18.1]
+Progress: Parameterizing module dc_fifo_from_gmm
+Progress: Adding dc_fifo_to_gmm [altera_avalon_dc_fifo 18.1]
+Progress: Parameterizing module dc_fifo_to_gmm
+Progress: Adding gmm_fg_detector [gmm_fg_detector 1.0]
+Progress: Parameterizing module gmm_fg_detector
+Progress: Adding gmm_fg_visor [gmm_fg_visor 1.0]
+Progress: Parameterizing module gmm_fg_visor
+Progress: Adding hps_ddr3 [terasic_hps_ddr3 1.0]
+Progress: Parameterizing module hps_ddr3
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding mm_clock_crossing_bridge [altera_avalon_mm_clock_crossing_bridge 18.1]
+Progress: Parameterizing module mm_clock_crossing_bridge
+Progress: Adding pll_0 [altera_pll 18.1]
+Progress: Parameterizing module pll_0
+Progress: Adding pll_1 [altera_pll 18.1]
+Progress: Parameterizing module pll_1
+Progress: Adding sysid [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid
+Progress: Adding timing_adapter_0 [timing_adapter 18.1]
+Progress: Parameterizing module timing_adapter_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: soc_system.alt_vip_cl_vfb_0: Buffer 3 frames, storage required is 18228 kB (0x00000000 to 0x011cd000)
+Info: soc_system.alt_vip_cl_vfb_gmm: Buffer 3 frames, storage required is 25065 kB (0x01400000 to 0x02c7a400)
+Info: soc_system.hps_ddr3.hps: HPS Main PLL counter settings: n = 0  m = 63
+Info: soc_system.hps_ddr3.hps: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: soc_system.pll_0: The legal reference clock frequency is 5.0 MHz..700.0 MHz
+Info: soc_system.pll_0: Able to implement PLL with user settings
+Info: soc_system.pll_1: The legal reference clock frequency is 50.0 MHz..700.0 MHz
+Info: soc_system.pll_1: Able to implement PLL with user settings
+Info: soc_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: soc_system.sysid: Time stamp will be automatically updated when this component is generated.
+Info: soc_system.alt_vip_cl_vfb_0.dout/dc_fifo_to_gmm.in: Ready latency is 1 for source and 0 for sink. Avalon-ST Adapter will be inserted..
+Info: soc_system.alt_vip_cl_vfb_0.dout/dc_fifo_to_gmm.in: The sink has a empty signal of 2 bits, but the source does not. Avalon-ST Adapter will be inserted.
+Info: soc_system.alt_vip_cl_vfb_gmm.dout/gmm_fg_detector.snk_mem: Ready latency is 1 for source and 0 for sink. Avalon-ST Adapter will be inserted..
+Info: soc_system.dc_fifo_to_gmm.out/gmm_fg_detector.snk_video: The source has a empty signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: soc_system.gmm_fg_detector.src_mem/alt_vip_cl_vfb_gmm.din: Ready latency is 0 for source and 1 for sink. Avalon-ST Adapter will be inserted..
+Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master mm_clock_crossing_bridge.m0 and slave gmm_fg_detector.cpu because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_clock_crossing_bridge.m0 and slave gmm_fg_detector.cpu because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_clock_crossing_bridge.m0 and slave gmm_fg_detector.cpu because the master has burstcount signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_clock_crossing_bridge.m0 and slave gmm_fg_detector.cpu because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_clock_crossing_bridge.m0 and slave gmm_fg_detector.cpu because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
+Info: avalon_st_adapter: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_001: Inserting timing_adapter: timing_adapter_0
+Info: avalon_st_adapter_002: Inserting data_format_adapter: data_format_adapter_0
+Warning: avalon_st_adapter_002.data_format_adapter_0: The symbols per beat on input interface(3) and the output interface(3) match,  but the input interface is using the empty signal, while the output interface is not using the empty signal.  Empty signal data may be lost between the input and the output interface (across this adapter).
+Info: avalon_st_adapter_003: Inserting timing_adapter: timing_adapter_0
+Info: TERASIC_CAMERA_0: "soc_system" instantiated TERASIC_CAMERA "TERASIC_CAMERA_0"
+Info: alt_vip_cl_vfb_0: "soc_system" instantiated alt_vip_cl_vfb "alt_vip_cl_vfb_0"
+Info: alt_vip_cl_vfb_gmm: "soc_system" instantiated alt_vip_cl_vfb "alt_vip_cl_vfb_gmm"
+Info: alt_vip_itc_0: "soc_system" instantiated alt_vip_itc "alt_vip_itc_0"
+Info: cpu: "soc_system" instantiated altera_nios2_gen2 "cpu"
+Info: cpu_ram: Starting RTL generation for module 'soc_system_cpu_ram'
+Info: cpu_ram:   Generation command is [exec D:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/18.1/quartus/bin64/perl/lib -I D:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/18.1/quartus/sopc_builder/bin -I D:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=soc_system_cpu_ram --dir=C:/Users/KALSHC~1/AppData/Local/Temp/alt8176_9136571548040344574.dir/0005_cpu_ram_gen/ --quartus_dir=D:/intelfpga/18.1/quartus --verilog --config=C:/Users/KALSHC~1/AppData/Local/Temp/alt8176_9136571548040344574.dir/0005_cpu_ram_gen//soc_system_cpu_ram_component_configuration.pl  --do_build_sim=0  ]
+Info: cpu_ram: Done RTL generation for module 'soc_system_cpu_ram'
+Info: cpu_ram: "soc_system" instantiated altera_avalon_onchip_memory2 "cpu_ram"
+Info: dc_fifo_from_gmm: "soc_system" instantiated altera_avalon_dc_fifo "dc_fifo_from_gmm"
+Info: gmm_fg_detector: "soc_system" instantiated gmm_fg_detector "gmm_fg_detector"
+Info: gmm_fg_visor: "soc_system" instantiated gmm_fg_visor "gmm_fg_visor"
+Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave hps.f2h_sdram0_data because the master has address signal 32 bit wide, but the slave is 28 bit wide.
+Info: Interconnect is inserted between master address_span_extender_0.expanded_master and slave hps.f2h_sdram0_data because the master has burstcount signal 9 bit wide, but the slave is 8 bit wide.
+Info: hps_ddr3: "soc_system" instantiated terasic_hps_ddr3 "hps_ddr3"
+Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
+Info: jtag_uart:   Generation command is [exec D:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga/18.1/quartus/bin64/perl/lib -I D:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/18.1/quartus/sopc_builder/bin -I D:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=C:/Users/KALSHC~1/AppData/Local/Temp/alt8176_9136571548040344574.dir/0009_jtag_uart_gen/ --quartus_dir=D:/intelfpga/18.1/quartus --verilog --config=C:/Users/KALSHC~1/AppData/Local/Temp/alt8176_9136571548040344574.dir/0009_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
+Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: mm_clock_crossing_bridge: "soc_system" instantiated altera_avalon_mm_clock_crossing_bridge "mm_clock_crossing_bridge"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_avalon_dc_fifo.v
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_avalon_dc_fifo.sdc
+Info: pll_0: "soc_system" instantiated altera_pll "pll_0"
+Info: pll_1: "soc_system" instantiated altera_pll "pll_1"
+Info: sysid: "soc_system" instantiated altera_avalon_sysid_qsys "sysid"
+Info: timing_adapter_0: "soc_system" instantiated timing_adapter "timing_adapter_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: avalon_st_adapter: "soc_system" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "soc_system" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: avalon_st_adapter_002: "soc_system" instantiated altera_avalon_st_adapter "avalon_st_adapter_002"
+Info: avalon_st_adapter_003: "soc_system" instantiated altera_avalon_st_adapter "avalon_st_adapter_003"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: video_in: "alt_vip_cl_vfb_0" instantiated alt_vip_video_input_bridge "video_in"
+Info: wr_ctrl: "alt_vip_cl_vfb_0" instantiated alt_vip_vfb_wr_ctrl "wr_ctrl"
+Info: pkt_trans_wr: "alt_vip_cl_vfb_0" instantiated alt_vip_packet_transfer "pkt_trans_wr"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: rd_ctrl: "alt_vip_cl_vfb_0" instantiated alt_vip_vfb_rd_ctrl "rd_ctrl"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: video_out: "alt_vip_cl_vfb_0" instantiated alt_vip_video_output_bridge "video_out"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: sync_ctrl: "alt_vip_cl_vfb_0" instantiated alt_vip_vfb_sync_ctrl "sync_ctrl"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: video_in: "alt_vip_cl_vfb_gmm" instantiated alt_vip_video_input_bridge "video_in"
+Info: cpu: Starting RTL generation for module 'soc_system_cpu_cpu'
+Info: cpu:   Generation command is [exec D:/intelFPGA/18.1/quartus/bin64//eperlcmd.exe -I D:/intelFPGA/18.1/quartus/bin64//perl/lib -I D:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga/18.1/quartus/sopc_builder/bin -I D:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/intelfpga/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=soc_system_cpu_cpu --dir=C:/Users/KALSHC~1/AppData/Local/Temp/alt8176_9136571548040344574.dir/0022_cpu_gen/ --quartus_bindir=D:/intelFPGA/18.1/quartus/bin64/ --verilog --config=C:/Users/KALSHC~1/AppData/Local/Temp/alt8176_9136571548040344574.dir/0022_cpu_gen//soc_system_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.10.07 20:13:58 (*) Starting Nios II generation
+Info: cpu: # 2019.10.07 20:13:58 (*)   Checking for plaintext license.
+Info: cpu: # 2019.10.07 20:13:59 (*)   Plaintext license not found.
+Info: cpu: # 2019.10.07 20:13:59 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2019.10.07 20:13:59 (*)   Encrypted license found.  SOF will not be time-limited.
+Info: cpu: # 2019.10.07 20:13:59 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.10.07 20:13:59 (*)   Creating all objects for CPU
+Info: cpu: # 2019.10.07 20:13:59 (*)     Testbench
+Info: cpu: # 2019.10.07 20:14:00 (*)     Instruction decoding
+Info: cpu: # 2019.10.07 20:14:00 (*)       Instruction fields
+Info: cpu: # 2019.10.07 20:14:00 (*)       Instruction decodes
+Info: cpu: # 2019.10.07 20:14:00 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2019.10.07 20:14:00 (*)       Instruction controls
+Info: cpu: # 2019.10.07 20:14:00 (*)     Pipeline frontend
+Info: cpu: # 2019.10.07 20:14:00 (*)     Pipeline backend
+Info: cpu: # 2019.10.07 20:14:02 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.10.07 20:14:03 (*)   Creating encrypted RTL
+Info: cpu: # 2019.10.07 20:14:04 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'soc_system_cpu_cpu'
+Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
+Info: address_span_extender_0: "hps_ddr3" instantiated altera_address_span_extender "address_span_extender_0"
+Info: hps: "Running  for module: hps"
+Info: hps: HPS Main PLL counter settings: n = 0  m = 63
+Info: hps: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: hps: "hps_ddr3" instantiated altera_hps "hps"
+Info: hps_reset_manager_0: "hps_ddr3" instantiated hps_reset_manager "hps_reset_manager_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "hps_ddr3" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: jtag_uart_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_avalon_jtag_slave_translator"
+Info: cpu_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "cpu_data_master_agent"
+Info: jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_avalon_jtag_slave_agent"
+Info: jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: router_004: "mm_interconnect_2" instantiated altera_merlin_router "router_004"
+Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_2" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: data_format_adapter_0: "avalon_st_adapter" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter" instantiated timing_adapter "timing_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter_001" instantiated timing_adapter "timing_adapter_0"
+Info: data_format_adapter_0: "avalon_st_adapter_002" instantiated data_format_adapter "data_format_adapter_0"
+Info: timing_adapter_0: "avalon_st_adapter_003" instantiated timing_adapter "timing_adapter_0"
+Info: vid_front: "video_in" instantiated alt_vip_video_input_bridge_resp "vid_front"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: vid_back: "video_in" instantiated alt_vip_video_input_bridge_cmd "vid_back"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/common/alt_vip_common_pkg.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_decode/src_hdl/alt_vip_common_event_packet_decode.sv
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/modules/alt_vip_common_event_packet_encode/src_hdl/alt_vip_common_event_packet_encode.sv
+Info: fpga_interfaces: "hps" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps" instantiated altera_hps_io "hps_io"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: hps_f2h_sdram0_data_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "hps_f2h_sdram0_data_burst_adapter"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: soc_system: Done "soc_system" with 80 modules, 680 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

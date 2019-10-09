@@ -1,0 +1,24 @@
+D:/vc/InnovateFPGA/FPGA/ObjectsRemover/gmm_fg_detector/hw/gmm_fg_detector.sv {1 {vlog -work work -vopt -sv -stats=none D:/vc/InnovateFPGA/FPGA/ObjectsRemover/gmm_fg_detector/hw/gmm_fg_detector.sv
+QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+-- Compiling module gmm_fg_detector
+-- Compiling module video_pipeline
+-- Compiling module mem_control_cutoff
+
+Top level modules:
+	gmm_fg_detector
+
+} {} {}} D:/vc/InnovateFPGA/FPGA/ObjectsRemover/gmm_fg_detector/hw/altera_avalon_sc_fifo.v {1 {vlog -work work -vopt -stats=none D:/vc/InnovateFPGA/FPGA/ObjectsRemover/gmm_fg_detector/hw/altera_avalon_sc_fifo.v
+QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+-- Compiling module altera_avalon_sc_fifo
+
+Top level modules:
+	altera_avalon_sc_fifo
+
+} {} {}} D:/vc/InnovateFPGA/FPGA/ObjectsRemover/gmm_fg_detector/tb/gmm_substract.sv {1 {vlog -work work -vopt -sv -stats=none D:/vc/InnovateFPGA/FPGA/ObjectsRemover/gmm_fg_detector/tb/gmm_substract.sv
+QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+-- Compiling module gmm_substract
+
+Top level modules:
+	gmm_substract
+
+} {} {}}
