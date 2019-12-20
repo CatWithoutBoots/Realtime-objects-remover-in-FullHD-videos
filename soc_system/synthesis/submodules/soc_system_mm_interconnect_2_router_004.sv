@@ -195,11 +195,11 @@ module soc_system_mm_interconnect_2_router_004
             src_channel = 4'b0001;
         end
 
-        if (destid == 2  && read_transaction) begin
+        if (destid == 1  && write_transaction) begin
             src_channel = 4'b0010;
         end
 
-        if (destid == 1  && write_transaction) begin
+        if (destid == 2  && read_transaction) begin
             src_channel = 4'b0100;
         end
 

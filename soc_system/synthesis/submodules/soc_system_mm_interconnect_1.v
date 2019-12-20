@@ -7,8 +7,8 @@
 
 `timescale 1 ps / 1 ps
 module soc_system_mm_interconnect_1 (
-		input  wire        pll_0_outclk3_clk,                                             //                                           pll_0_outclk3.clk
-		input  wire        gmm_fg_detector_rst_reset_bridge_in_reset_reset,               //               gmm_fg_detector_rst_reset_bridge_in_reset.reset
+		input  wire        pll_0_outclk2_clk,                                             //                                           pll_0_outclk2.clk
+		input  wire        gmm_rst_reset_bridge_in_reset_reset,                           //                           gmm_rst_reset_bridge_in_reset.reset
 		input  wire        mm_clock_crossing_bridge_m0_reset_reset_bridge_in_reset_reset, // mm_clock_crossing_bridge_m0_reset_reset_bridge_in_reset.reset
 		input  wire [3:0]  mm_clock_crossing_bridge_m0_address,                           //                             mm_clock_crossing_bridge_m0.address
 		output wire        mm_clock_crossing_bridge_m0_waitrequest,                       //                                                        .waitrequest
@@ -20,25 +20,25 @@ module soc_system_mm_interconnect_1 (
 		input  wire        mm_clock_crossing_bridge_m0_write,                             //                                                        .write
 		input  wire [31:0] mm_clock_crossing_bridge_m0_writedata,                         //                                                        .writedata
 		input  wire        mm_clock_crossing_bridge_m0_debugaccess,                       //                                                        .debugaccess
-		output wire [3:0]  gmm_fg_detector_cpu_address,                                   //                                     gmm_fg_detector_cpu.address
-		output wire        gmm_fg_detector_cpu_write,                                     //                                                        .write
-		output wire        gmm_fg_detector_cpu_read,                                      //                                                        .read
-		input  wire [31:0] gmm_fg_detector_cpu_readdata,                                  //                                                        .readdata
-		output wire [31:0] gmm_fg_detector_cpu_writedata,                                 //                                                        .writedata
-		output wire        gmm_fg_detector_cpu_chipselect                                 //                                                        .chipselect
+		output wire [3:0]  gmm_gmm_fg_detector_cpu_address,                               //                                 gmm_gmm_fg_detector_cpu.address
+		output wire        gmm_gmm_fg_detector_cpu_write,                                 //                                                        .write
+		output wire        gmm_gmm_fg_detector_cpu_read,                                  //                                                        .read
+		input  wire [31:0] gmm_gmm_fg_detector_cpu_readdata,                              //                                                        .readdata
+		output wire [31:0] gmm_gmm_fg_detector_cpu_writedata,                             //                                                        .writedata
+		output wire        gmm_gmm_fg_detector_cpu_chipselect                             //                                                        .chipselect
 	);
 
-	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_waitrequest;   // gmm_fg_detector_cpu_translator:uav_waitrequest -> mm_clock_crossing_bridge_m0_translator:uav_waitrequest
-	wire  [31:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_readdata;      // gmm_fg_detector_cpu_translator:uav_readdata -> mm_clock_crossing_bridge_m0_translator:uav_readdata
-	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_debugaccess;   // mm_clock_crossing_bridge_m0_translator:uav_debugaccess -> gmm_fg_detector_cpu_translator:uav_debugaccess
-	wire   [5:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_address;       // mm_clock_crossing_bridge_m0_translator:uav_address -> gmm_fg_detector_cpu_translator:uav_address
-	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_read;          // mm_clock_crossing_bridge_m0_translator:uav_read -> gmm_fg_detector_cpu_translator:uav_read
-	wire   [3:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_byteenable;    // mm_clock_crossing_bridge_m0_translator:uav_byteenable -> gmm_fg_detector_cpu_translator:uav_byteenable
-	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_readdatavalid; // gmm_fg_detector_cpu_translator:uav_readdatavalid -> mm_clock_crossing_bridge_m0_translator:uav_readdatavalid
-	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_lock;          // mm_clock_crossing_bridge_m0_translator:uav_lock -> gmm_fg_detector_cpu_translator:uav_lock
-	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_write;         // mm_clock_crossing_bridge_m0_translator:uav_write -> gmm_fg_detector_cpu_translator:uav_write
-	wire  [31:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_writedata;     // mm_clock_crossing_bridge_m0_translator:uav_writedata -> gmm_fg_detector_cpu_translator:uav_writedata
-	wire   [2:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_burstcount;    // mm_clock_crossing_bridge_m0_translator:uav_burstcount -> gmm_fg_detector_cpu_translator:uav_burstcount
+	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_waitrequest;   // gmm_gmm_fg_detector_cpu_translator:uav_waitrequest -> mm_clock_crossing_bridge_m0_translator:uav_waitrequest
+	wire  [31:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_readdata;      // gmm_gmm_fg_detector_cpu_translator:uav_readdata -> mm_clock_crossing_bridge_m0_translator:uav_readdata
+	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_debugaccess;   // mm_clock_crossing_bridge_m0_translator:uav_debugaccess -> gmm_gmm_fg_detector_cpu_translator:uav_debugaccess
+	wire   [5:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_address;       // mm_clock_crossing_bridge_m0_translator:uav_address -> gmm_gmm_fg_detector_cpu_translator:uav_address
+	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_read;          // mm_clock_crossing_bridge_m0_translator:uav_read -> gmm_gmm_fg_detector_cpu_translator:uav_read
+	wire   [3:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_byteenable;    // mm_clock_crossing_bridge_m0_translator:uav_byteenable -> gmm_gmm_fg_detector_cpu_translator:uav_byteenable
+	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_readdatavalid; // gmm_gmm_fg_detector_cpu_translator:uav_readdatavalid -> mm_clock_crossing_bridge_m0_translator:uav_readdatavalid
+	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_lock;          // mm_clock_crossing_bridge_m0_translator:uav_lock -> gmm_gmm_fg_detector_cpu_translator:uav_lock
+	wire         mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_write;         // mm_clock_crossing_bridge_m0_translator:uav_write -> gmm_gmm_fg_detector_cpu_translator:uav_write
+	wire  [31:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_writedata;     // mm_clock_crossing_bridge_m0_translator:uav_writedata -> gmm_gmm_fg_detector_cpu_translator:uav_writedata
+	wire   [2:0] mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_burstcount;    // mm_clock_crossing_bridge_m0_translator:uav_burstcount -> gmm_gmm_fg_detector_cpu_translator:uav_burstcount
 
 	altera_merlin_master_translator #(
 		.AV_ADDRESS_W                (4),
@@ -65,7 +65,7 @@ module soc_system_mm_interconnect_1 (
 		.AV_LINEWRAPBURSTS           (0),
 		.AV_REGISTERINCOMINGSIGNALS  (0)
 	) mm_clock_crossing_bridge_m0_translator (
-		.clk                    (pll_0_outclk3_clk),                                                              //                       clk.clk
+		.clk                    (pll_0_outclk2_clk),                                                              //                       clk.clk
 		.reset                  (mm_clock_crossing_bridge_m0_reset_reset_bridge_in_reset_reset),                  //                     reset.reset
 		.uav_address            (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_address),       // avalon_universal_master_0.address
 		.uav_burstcount         (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_burstcount),    //                          .burstcount
@@ -126,9 +126,9 @@ module soc_system_mm_interconnect_1 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) gmm_fg_detector_cpu_translator (
-		.clk                    (pll_0_outclk3_clk),                                                              //                      clk.clk
-		.reset                  (gmm_fg_detector_rst_reset_bridge_in_reset_reset),                                //                    reset.reset
+	) gmm_gmm_fg_detector_cpu_translator (
+		.clk                    (pll_0_outclk2_clk),                                                              //                      clk.clk
+		.reset                  (mm_clock_crossing_bridge_m0_reset_reset_bridge_in_reset_reset),                  //                    reset.reset
 		.uav_address            (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_address),       // avalon_universal_slave_0.address
 		.uav_burstcount         (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_burstcount),    //                         .burstcount
 		.uav_read               (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_read),          //                         .read
@@ -140,12 +140,12 @@ module soc_system_mm_interconnect_1 (
 		.uav_writedata          (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_writedata),     //                         .writedata
 		.uav_lock               (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_lock),          //                         .lock
 		.uav_debugaccess        (mm_clock_crossing_bridge_m0_translator_avalon_universal_master_0_debugaccess),   //                         .debugaccess
-		.av_address             (gmm_fg_detector_cpu_address),                                                    //      avalon_anti_slave_0.address
-		.av_write               (gmm_fg_detector_cpu_write),                                                      //                         .write
-		.av_read                (gmm_fg_detector_cpu_read),                                                       //                         .read
-		.av_readdata            (gmm_fg_detector_cpu_readdata),                                                   //                         .readdata
-		.av_writedata           (gmm_fg_detector_cpu_writedata),                                                  //                         .writedata
-		.av_chipselect          (gmm_fg_detector_cpu_chipselect),                                                 //                         .chipselect
+		.av_address             (gmm_gmm_fg_detector_cpu_address),                                                //      avalon_anti_slave_0.address
+		.av_write               (gmm_gmm_fg_detector_cpu_write),                                                  //                         .write
+		.av_read                (gmm_gmm_fg_detector_cpu_read),                                                   //                         .read
+		.av_readdata            (gmm_gmm_fg_detector_cpu_readdata),                                               //                         .readdata
+		.av_writedata           (gmm_gmm_fg_detector_cpu_writedata),                                              //                         .writedata
+		.av_chipselect          (gmm_gmm_fg_detector_cpu_chipselect),                                             //                         .chipselect
 		.av_begintransfer       (),                                                                               //              (terminated)
 		.av_beginbursttransfer  (),                                                                               //              (terminated)
 		.av_burstcount          (),                                                                               //              (terminated)

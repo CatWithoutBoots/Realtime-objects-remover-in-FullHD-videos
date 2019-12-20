@@ -25,19 +25,11 @@
          type = "int";
       }
    }
-   element alt_vip_cl_vfb_gmm
-   {
-      datum _sortIndex
-      {
-         value = "11";
-         type = "int";
-      }
-   }
    element alt_vip_itc_0
    {
       datum _sortIndex
       {
-         value = "17";
+         value = "16";
          type = "int";
       }
    }
@@ -93,7 +85,7 @@
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "11";
          type = "int";
       }
    }
@@ -105,7 +97,7 @@
          type = "int";
       }
    }
-   element gmm_fg_detector
+   element gmm
    {
       datum _sortIndex
       {
@@ -113,20 +105,12 @@
          type = "int";
       }
    }
-   element gmm_fg_detector.cpu
+   element gmm.gmm_fg_detector_cpu
    {
       datum baseAddress
       {
          value = "0";
          type = "String";
-      }
-   }
-   element gmm_fg_visor
-   {
-      datum _sortIndex
-      {
-         value = "13";
-         type = "int";
       }
    }
    element hps_ddr3
@@ -201,14 +185,6 @@
          type = "int";
       }
    }
-   element pll_0.outclk3
-   {
-      datum color
-      {
-         value = "-3407668";
-         type = "int";
-      }
-   }
    element pll_1
    {
       datum _sortIndex
@@ -217,12 +193,12 @@
          type = "int";
       }
    }
-   element soc_system
+   element snk_video_adapter_0
    {
-      datum _originalDeviceFamily
+      datum _sortIndex
       {
-         value = "Cyclone V";
-         type = "String";
+         value = "12";
+         type = "int";
       }
    }
    element soc_system
@@ -455,6 +431,46 @@
       {
          value = "Cyclone V";
          type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element soc_system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
+         type = "String";
+      }
+   }
+   element st_adapter_1
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
       }
    }
    element sysid
@@ -473,14 +489,6 @@
          type = "String";
       }
    }
-   element timing_adapter_0
-   {
-      datum _sortIndex
-      {
-         value = "16";
-         type = "int";
-      }
-   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -494,7 +502,7 @@
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
- <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="maxAdditionalLatency" value="4" />
  <parameter name="projectName">DE10_Nano_D8M_DDR3.qpf</parameter>
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
@@ -514,7 +522,7 @@
  <interface name="clk_hps_ref" internal="hps_ddr3.clk" type="clock" dir="end" />
  <interface
    name="gmm_fg_visor_sw"
-   internal="gmm_fg_visor.sw"
+   internal="gmm.gmm_fg_visor_sw"
    type="conduit"
    dir="end" />
  <interface
@@ -562,56 +570,12 @@
   <parameter name="MAX_HEIGHT" value="1080" />
   <parameter name="MAX_SYMBOLS_PER_PACKET" value="10" />
   <parameter name="MAX_WIDTH" value="1920" />
-  <parameter name="MEM_BASE_ADDR" value="0" />
+  <parameter name="MEM_BASE_ADDR" value="66356320" />
   <parameter name="MEM_BUFFER_OFFSET" value="16777216" />
   <parameter name="MEM_PORT_WIDTH" value="128" />
   <parameter name="MULTI_FRAME_DELAY" value="1" />
   <parameter name="NUMBER_OF_COLOR_PLANES" value="3" />
   <parameter name="PIXELS_IN_PARALLEL" value="1" />
-  <parameter name="PRIORITIZE_FMAX" value="0" />
-  <parameter name="READER_RUNTIME_CONTROL" value="0" />
-  <parameter name="READY_LATENCY" value="1" />
-  <parameter name="READ_BURST_TARGET" value="64" />
-  <parameter name="READ_FIFO_DEPTH" value="512" />
-  <parameter name="REPEAT_FRAMES" value="1" />
-  <parameter name="TEST_INIT" value="0" />
-  <parameter name="USER_PACKETS_MAX_STORAGE" value="1" />
-  <parameter name="USE_BUFFER_OFFSET" value="0" />
-  <parameter name="WRITER_RUNTIME_CONTROL" value="0" />
-  <parameter name="WRITE_BURST_TARGET" value="64" />
-  <parameter name="WRITE_FIFO_DEPTH" value="512" />
- </module>
- <module
-   name="alt_vip_cl_vfb_gmm"
-   kind="alt_vip_cl_vfb"
-   version="18.1"
-   enabled="1">
-  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
-  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
-  <parameter name="BITS_PER_SYMBOL" value="8" />
-  <parameter name="BURST_ALIGNMENT" value="1" />
-  <parameter name="CLOCKS_ARE_SEPARATE" value="1" />
-  <parameter name="COLOR_PLANES_ARE_IN_PARALLEL" value="1" />
-  <parameter name="CONTROLLED_DROP_REPEAT" value="0" />
-  <parameter name="DROP_FRAMES" value="1" />
-  <parameter name="DROP_INVALID_FIELDS" value="0" />
-  <parameter name="DROP_REPEAT_USER" value="0" />
-  <parameter name="FAMILY" value="Cyclone V" />
-  <parameter name="INTERLACED_SUPPORT" value="0" />
-  <parameter name="IS_FRAME_READER" value="0" />
-  <parameter name="IS_FRAME_WRITER" value="0" />
-  <parameter name="IS_SYNC_MASTER" value="0" />
-  <parameter name="IS_SYNC_SLAVE" value="0" />
-  <parameter name="LINE_BASED_BUFFERING" value="0" />
-  <parameter name="MAX_HEIGHT" value="1080" />
-  <parameter name="MAX_SYMBOLS_PER_PACKET" value="32" />
-  <parameter name="MAX_WIDTH" value="1920" />
-  <parameter name="MEM_BASE_ADDR" value="20971520" />
-  <parameter name="MEM_BUFFER_OFFSET" value="16777216" />
-  <parameter name="MEM_PORT_WIDTH" value="128" />
-  <parameter name="MULTI_FRAME_DELAY" value="1" />
-  <parameter name="NUMBER_OF_COLOR_PLANES" value="4" />
-  <parameter name="PIXELS_IN_PARALLEL" value="4" />
   <parameter name="PRIORITIZE_FMAX" value="0" />
   <parameter name="READER_RUNTIME_CONTROL" value="0" />
   <parameter name="READY_LATENCY" value="1" />
@@ -687,7 +651,7 @@
   <parameter name="dataAddrWidth" value="25" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='gmm_fg_detector.cpu' start='0x0' end='0x40' type='gmm_fg_detector.cpu' /><slave name='cpu_ram.s1' start='0x1010000' end='0x101EA60' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x1020800' end='0x1021000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sysid.control_slave' start='0x1021000' end='0x1021008' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x1021008' end='0x1021010' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='gmm_gmm_fg_detector.cpu' start='0x0' end='0x40' type='gmm_fg_detector.cpu' /><slave name='cpu_ram.s1' start='0x1010000' end='0x101EA60' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x1020800' end='0x1021000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sysid.control_slave' start='0x1021000' end='0x1021008' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x1021008' end='0x1021010' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -882,14 +846,14 @@
    kind="altera_avalon_dc_fifo"
    version="18.1"
    enabled="1">
-  <parameter name="BITS_PER_SYMBOL" value="49" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
   <parameter name="CHANNEL_WIDTH" value="0" />
   <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
   <parameter name="ERROR_WIDTH" value="0" />
   <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
   <parameter name="FIFO_DEPTH" value="64" />
   <parameter name="RD_SYNC_DEPTH" value="3" />
-  <parameter name="SYMBOLS_PER_BEAT" value="1" />
+  <parameter name="SYMBOLS_PER_BEAT" value="3" />
   <parameter name="USE_IN_FILL_LEVEL" value="0" />
   <parameter name="USE_OUT_FILL_LEVEL" value="0" />
   <parameter name="USE_PACKETS" value="1" />
@@ -913,12 +877,20 @@
   <parameter name="USE_PACKETS" value="1" />
   <parameter name="WR_SYNC_DEPTH" value="3" />
  </module>
- <module
-   name="gmm_fg_detector"
-   kind="gmm_fg_detector"
-   version="1.0"
-   enabled="1" />
- <module name="gmm_fg_visor" kind="gmm_fg_visor" version="1.0" enabled="1" />
+ <module name="gmm" kind="gmm" version="1.0" enabled="1">
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_MEM_CLK_CLOCK_DOMAIN" value="9" />
+  <parameter name="AUTO_MEM_CLK_CLOCK_RATE" value="110769230" />
+  <parameter name="AUTO_MEM_CLK_RESET_DOMAIN" value="9" />
+  <parameter name="AUTO_MEM_READ_ADDRESS_MAP"><![CDATA[<address-map><slave name='hps_ddr3_hps_bridges.f2h_sdram0_data' start='0x0' end='0x40000000' /></address-map>]]></parameter>
+  <parameter name="AUTO_MEM_READ_ADDRESS_WIDTH" value="AddressWidth = 30" />
+  <parameter name="AUTO_MEM_WRITE_ADDRESS_MAP"><![CDATA[<address-map><slave name='hps_ddr3_hps_bridges.f2h_sdram0_data' start='0x0' end='0x40000000' /></address-map>]]></parameter>
+  <parameter name="AUTO_MEM_WRITE_ADDRESS_WIDTH" value="AddressWidth = 30" />
+  <parameter name="AUTO_UNIQUE_ID" value="$${FILENAME}_gmm" />
+ </module>
  <module name="hps_ddr3" kind="terasic_hps_ddr3" version="1.0" enabled="1">
   <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="5" />
   <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
@@ -928,7 +900,7 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
   <parameter name="AUTO_GENERATION_ID" value="0" />
   <parameter name="AUTO_HPS_F2H_SDRAM0_CLOCK_CLOCK_DOMAIN" value="9" />
-  <parameter name="AUTO_HPS_F2H_SDRAM0_CLOCK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_HPS_F2H_SDRAM0_CLOCK_CLOCK_RATE" value="110769230" />
   <parameter name="AUTO_HPS_F2H_SDRAM0_CLOCK_RESET_DOMAIN" value="9" />
   <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_hps_ddr3</parameter>
  </module>
@@ -985,7 +957,7 @@
   <parameter name="gui_actual_output_clock_frequency16" value="0 MHz" />
   <parameter name="gui_actual_output_clock_frequency17" value="0 MHz" />
   <parameter name="gui_actual_output_clock_frequency2" value="0 MHz" />
-  <parameter name="gui_actual_output_clock_frequency3" value="0 MHz" />
+  <parameter name="gui_actual_output_clock_frequency3" value="100.000000 MHz" />
   <parameter name="gui_actual_output_clock_frequency4" value="0 MHz" />
   <parameter name="gui_actual_output_clock_frequency5" value="0 MHz" />
   <parameter name="gui_actual_output_clock_frequency6" value="0 MHz" />
@@ -1085,7 +1057,7 @@
   <parameter name="gui_fractional_cout" value="32" />
   <parameter name="gui_mif_generate" value="false" />
   <parameter name="gui_multiply_factor" value="1" />
-  <parameter name="gui_number_of_clocks" value="4" />
+  <parameter name="gui_number_of_clocks" value="3" />
   <parameter name="gui_operation_mode" value="direct" />
   <parameter name="gui_output_clock_frequency0" value="160.0" />
   <parameter name="gui_output_clock_frequency1" value="20.0" />
@@ -1097,8 +1069,8 @@
   <parameter name="gui_output_clock_frequency15" value="100.0" />
   <parameter name="gui_output_clock_frequency16" value="100.0" />
   <parameter name="gui_output_clock_frequency17" value="100.0" />
-  <parameter name="gui_output_clock_frequency2" value="100.0" />
-  <parameter name="gui_output_clock_frequency3" value="133.333333" />
+  <parameter name="gui_output_clock_frequency2" value="110.0" />
+  <parameter name="gui_output_clock_frequency3" value="110.0" />
   <parameter name="gui_output_clock_frequency4" value="100.0" />
   <parameter name="gui_output_clock_frequency5" value="100.0" />
   <parameter name="gui_output_clock_frequency6" value="100.0" />
@@ -1375,32 +1347,45 @@
   <parameter name="gui_use_locked" value="false" />
  </module>
  <module
+   name="snk_video_adapter_0"
+   kind="snk_video_adapter"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="st_adapter_1"
+   kind="altera_avalon_st_adapter"
+   version="18.1"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="inBitsPerSymbol" value="8" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inDataWidth" value="24" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inUseEmptyPort" value="0" />
+  <parameter name="inUsePackets" value="1" />
+  <parameter name="inUseReady" value="1" />
+  <parameter name="inUseValid" value="1" />
+  <parameter name="outChannelWidth" value="0" />
+  <parameter name="outDataWidth" value="24" />
+  <parameter name="outErrorDescriptor" value="" />
+  <parameter name="outErrorWidth" value="0" />
+  <parameter name="outMaxChannel" value="0" />
+  <parameter name="outReadyLatency" value="1" />
+  <parameter name="outUseEmptyPort" value="0" />
+  <parameter name="outUseReady" value="1" />
+  <parameter name="outUseValid" value="1" />
+ </module>
+ <module
    name="sysid"
    kind="altera_avalon_sysid_qsys"
    version="18.1"
    enabled="1">
   <parameter name="id" value="0" />
- </module>
- <module
-   name="timing_adapter_0"
-   kind="timing_adapter"
-   version="18.1"
-   enabled="1">
-  <parameter name="inBitsPerSymbol" value="8" />
-  <parameter name="inChannelWidth" value="0" />
-  <parameter name="inErrorDescriptor" value="" />
-  <parameter name="inErrorWidth" value="0" />
-  <parameter name="inMaxChannel" value="0" />
-  <parameter name="inReadyLatency" value="0" />
-  <parameter name="inSymbolsPerBeat" value="3" />
-  <parameter name="inUseEmpty" value="false" />
-  <parameter name="inUseEmptyPort" value="NO" />
-  <parameter name="inUsePackets" value="true" />
-  <parameter name="inUseReady" value="true" />
-  <parameter name="inUseValid" value="true" />
-  <parameter name="outReadyLatency" value="1" />
-  <parameter name="outUseReady" value="true" />
-  <parameter name="outUseValid" value="true" />
  </module>
  <connection
    kind="avalon"
@@ -1465,7 +1450,7 @@
    kind="avalon"
    version="18.1"
    start="mm_clock_crossing_bridge.m0"
-   end="gmm_fg_detector.cpu">
+   end="gmm.gmm_fg_detector_cpu">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -1474,15 +1459,6 @@
    kind="avalon"
    version="18.1"
    start="alt_vip_cl_vfb_0.mem_master_rd"
-   end="hps_ddr3.hps_f2h_sdram0_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="18.1"
-   start="alt_vip_cl_vfb_gmm.mem_master_rd"
    end="hps_ddr3.hps_f2h_sdram0_data">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
@@ -1500,7 +1476,16 @@
  <connection
    kind="avalon"
    version="18.1"
-   start="alt_vip_cl_vfb_gmm.mem_master_wr"
+   start="gmm.mem_read"
+   end="hps_ddr3.hps_f2h_sdram0_data">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="gmm.mem_write"
    end="hps_ddr3.hps_f2h_sdram0_data">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
@@ -1515,41 +1500,31 @@
    kind="avalon_streaming"
    version="18.1"
    start="alt_vip_cl_vfb_0.dout"
-   end="timing_adapter_0.in" />
- <connection
-   kind="avalon_streaming"
-   version="18.1"
-   start="alt_vip_cl_vfb_gmm.dout"
-   end="gmm_fg_detector.snk_mem" />
- <connection
-   kind="avalon_streaming"
-   version="18.1"
-   start="timing_adapter_0.out"
    end="alt_vip_itc_0.din" />
  <connection
    kind="avalon_streaming"
    version="18.1"
    start="dc_fifo_from_gmm.out"
-   end="gmm_fg_visor.snk" />
+   end="snk_video_adapter_0.snk" />
  <connection
    kind="avalon_streaming"
    version="18.1"
    start="dc_fifo_to_gmm.out"
-   end="gmm_fg_detector.snk_video" />
+   end="gmm.snk_video" />
  <connection
    kind="avalon_streaming"
    version="18.1"
-   start="gmm_fg_visor.src"
+   start="st_adapter_1.out_0"
    end="alt_vip_cl_vfb_0.din" />
  <connection
    kind="avalon_streaming"
    version="18.1"
-   start="gmm_fg_detector.src_mem"
-   end="alt_vip_cl_vfb_gmm.din" />
+   start="snk_video_adapter_0.src"
+   end="st_adapter_1.in_0" />
  <connection
    kind="avalon_streaming"
    version="18.1"
-   start="gmm_fg_detector.src_video"
+   start="gmm.src_video"
    end="dc_fifo_from_gmm.in" />
  <connection kind="clock" version="18.1" start="clk_50.clk" end="cpu.clk" />
  <connection kind="clock" version="18.1" start="clk_50.clk" end="jtag_uart.clk" />
@@ -1565,12 +1540,7 @@
    kind="clock"
    version="18.1"
    start="pll_0.outclk0"
-   end="gmm_fg_visor.clk" />
- <connection
-   kind="clock"
-   version="18.1"
-   start="pll_0.outclk0"
-   end="timing_adapter_0.clk" />
+   end="snk_video_adapter_0.clk" />
  <connection
    kind="clock"
    version="18.1"
@@ -1581,6 +1551,11 @@
    version="18.1"
    start="pll_0.outclk0"
    end="dc_fifo_to_gmm.in_clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="pll_0.outclk0"
+   end="st_adapter_1.in_clk_0" />
  <connection
    kind="clock"
    version="18.1"
@@ -1605,36 +1580,22 @@
    kind="clock"
    version="18.1"
    start="pll_0.outclk2"
+   end="dc_fifo_from_gmm.in_clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="pll_0.outclk2"
+   end="mm_clock_crossing_bridge.m0_clk" />
+ <connection kind="clock" version="18.1" start="pll_0.outclk2" end="gmm.mem_clk" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="pll_0.outclk2"
    end="alt_vip_cl_vfb_0.mem_clock" />
  <connection
    kind="clock"
    version="18.1"
    start="pll_0.outclk2"
-   end="alt_vip_cl_vfb_gmm.mem_clock" />
- <connection
-   kind="clock"
-   version="18.1"
-   start="pll_0.outclk3"
-   end="gmm_fg_detector.clock" />
- <connection
-   kind="clock"
-   version="18.1"
-   start="pll_0.outclk3"
-   end="dc_fifo_from_gmm.in_clk" />
- <connection
-   kind="clock"
-   version="18.1"
-   start="pll_0.outclk3"
-   end="mm_clock_crossing_bridge.m0_clk" />
- <connection
-   kind="clock"
-   version="18.1"
-   start="pll_0.outclk3"
-   end="alt_vip_cl_vfb_gmm.main_clock" />
- <connection
-   kind="clock"
-   version="18.1"
-   start="pll_0.outclk3"
    end="dc_fifo_to_gmm.out_clk" />
  <connection kind="interrupt" version="18.1" start="cpu.irq" end="jtag_uart.irq">
   <parameter name="irqNumber" value="0" />
@@ -1658,6 +1619,11 @@
    kind="reset"
    version="18.1"
    start="clk_50.clk_reset"
+   end="st_adapter_1.in_rst_0" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_50.clk_reset"
    end="alt_vip_itc_0.is_clk_rst_reset" />
  <connection
    kind="reset"
@@ -1673,17 +1639,7 @@
    kind="reset"
    version="18.1"
    start="clk_50.clk_reset"
-   end="alt_vip_cl_vfb_gmm.main_reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_50.clk_reset"
    end="alt_vip_cl_vfb_0.mem_reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_50.clk_reset"
-   end="alt_vip_cl_vfb_gmm.mem_reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -1704,11 +1660,6 @@
    version="18.1"
    start="clk_50.clk_reset"
    end="pll_1.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_50.clk_reset"
-   end="timing_adapter_0.reset" />
  <connection kind="reset" version="18.1" start="clk_50.clk_reset" end="cpu.reset" />
  <connection
    kind="reset"
@@ -1725,16 +1676,12 @@
    version="18.1"
    start="clk_50.clk_reset"
    end="cpu_ram.reset1" />
+ <connection kind="reset" version="18.1" start="clk_50.clk_reset" end="gmm.rst" />
  <connection
    kind="reset"
    version="18.1"
    start="clk_50.clk_reset"
-   end="gmm_fg_visor.rst" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="clk_50.clk_reset"
-   end="gmm_fg_detector.rst" />
+   end="snk_video_adapter_0.rst" />
  <connection
    kind="reset"
    version="18.1"
@@ -1769,17 +1716,7 @@
    kind="reset"
    version="18.1"
    start="hps_ddr3.h2f_reset"
-   end="alt_vip_cl_vfb_gmm.main_reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="hps_ddr3.h2f_reset"
    end="alt_vip_cl_vfb_0.mem_reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="hps_ddr3.h2f_reset"
-   end="alt_vip_cl_vfb_gmm.mem_reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -1790,21 +1727,6 @@
    version="18.1"
    start="hps_ddr3.h2f_reset"
    end="dc_fifo_from_gmm.out_clk_reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="hps_ddr3.h2f_reset"
-   end="timing_adapter_0.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="hps_ddr3.h2f_reset"
-   end="gmm_fg_visor.rst" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="hps_ddr3.h2f_reset"
-   end="gmm_fg_detector.rst" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
- <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="4" />
 </system>

@@ -9,14 +9,14 @@
 module soc_system_avalon_st_adapter_002 #(
 		parameter inBitsPerSymbol = 8,
 		parameter inUsePackets    = 1,
-		parameter inDataWidth     = 128,
+		parameter inDataWidth     = 24,
 		parameter inChannelWidth  = 0,
 		parameter inErrorWidth    = 0,
-		parameter inUseEmptyPort  = 1,
+		parameter inUseEmptyPort  = 0,
 		parameter inUseValid      = 1,
 		parameter inUseReady      = 1,
-		parameter inReadyLatency  = 1,
-		parameter outDataWidth    = 128,
+		parameter inReadyLatency  = 0,
+		parameter outDataWidth    = 24,
 		parameter outChannelWidth = 0,
 		parameter outErrorWidth   = 0,
 		parameter outUseEmptyPort = 1,
@@ -24,20 +24,19 @@ module soc_system_avalon_st_adapter_002 #(
 		parameter outUseReady     = 1,
 		parameter outReadyLatency = 0
 	) (
-		input  wire         in_clk_0_clk,        // in_clk_0.clk
-		input  wire         in_rst_0_reset,      // in_rst_0.reset
-		input  wire [127:0] in_0_data,           //     in_0.data
-		input  wire         in_0_valid,          //         .valid
-		output wire         in_0_ready,          //         .ready
-		input  wire         in_0_startofpacket,  //         .startofpacket
-		input  wire         in_0_endofpacket,    //         .endofpacket
-		input  wire [3:0]   in_0_empty,          //         .empty
-		output wire [127:0] out_0_data,          //    out_0.data
-		output wire         out_0_valid,         //         .valid
-		input  wire         out_0_ready,         //         .ready
-		output wire         out_0_startofpacket, //         .startofpacket
-		output wire         out_0_endofpacket,   //         .endofpacket
-		output wire [3:0]   out_0_empty          //         .empty
+		input  wire        in_clk_0_clk,        // in_clk_0.clk
+		input  wire        in_rst_0_reset,      // in_rst_0.reset
+		input  wire [23:0] in_0_data,           //     in_0.data
+		input  wire        in_0_valid,          //         .valid
+		output wire        in_0_ready,          //         .ready
+		input  wire        in_0_startofpacket,  //         .startofpacket
+		input  wire        in_0_endofpacket,    //         .endofpacket
+		output wire [23:0] out_0_data,          //    out_0.data
+		output wire        out_0_valid,         //         .valid
+		input  wire        out_0_ready,         //         .ready
+		output wire        out_0_startofpacket, //         .startofpacket
+		output wire        out_0_endofpacket,   //         .endofpacket
+		output wire [1:0]  out_0_empty          //         .empty
 	);
 
 	generate
@@ -64,7 +63,7 @@ module soc_system_avalon_st_adapter_002 #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inusepackets_check ( .error(1'b1) );
 		end
-		if (inDataWidth != 128)
+		if (inDataWidth != 24)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
@@ -91,7 +90,7 @@ module soc_system_avalon_st_adapter_002 #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inerrorwidth_check ( .error(1'b1) );
 		end
-		if (inUseEmptyPort != 1)
+		if (inUseEmptyPort != 0)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
@@ -118,7 +117,7 @@ module soc_system_avalon_st_adapter_002 #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inuseready_check ( .error(1'b1) );
 		end
-		if (inReadyLatency != 1)
+		if (inReadyLatency != 0)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
@@ -127,7 +126,7 @@ module soc_system_avalon_st_adapter_002 #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					inreadylatency_check ( .error(1'b1) );
 		end
-		if (outDataWidth != 128)
+		if (outDataWidth != 24)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
@@ -192,7 +191,7 @@ module soc_system_avalon_st_adapter_002 #(
 		end
 	endgenerate
 
-	soc_system_avalon_st_adapter_002_timing_adapter_0 timing_adapter_0 (
+	soc_system_avalon_st_adapter_002_data_format_adapter_0 data_format_adapter_0 (
 		.clk               (in_clk_0_clk),        //   clk.clk
 		.reset_n           (~in_rst_0_reset),     // reset.reset_n
 		.in_data           (in_0_data),           //    in.data
@@ -200,7 +199,6 @@ module soc_system_avalon_st_adapter_002 #(
 		.in_ready          (in_0_ready),          //      .ready
 		.in_startofpacket  (in_0_startofpacket),  //      .startofpacket
 		.in_endofpacket    (in_0_endofpacket),    //      .endofpacket
-		.in_empty          (in_0_empty),          //      .empty
 		.out_data          (out_0_data),          //   out.data
 		.out_valid         (out_0_valid),         //      .valid
 		.out_ready         (out_0_ready),         //      .ready

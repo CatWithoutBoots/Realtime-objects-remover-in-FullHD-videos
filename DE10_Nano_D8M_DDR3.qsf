@@ -610,571 +610,343 @@ set_global_assignment -name SDC_FILE DE10_Nano_D8M_DDR3.SDC
 set_global_assignment -name VERILOG_FILE V/V_D8M/D8M_LUT.v
 set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
 set_global_assignment -name SIGNALTAP_FILE output_files/stp2.stp
-set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id vfb_in
-set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|main_clock" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[0]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[10]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[11]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[12]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[13]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[14]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[15]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[16]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[17]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[18]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[19]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[1]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[20]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[21]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[22]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[23]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[2]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[3]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[4]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[5]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[6]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[7]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[8]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[9]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_endofpacket" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_ready" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_startofpacket" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_valid" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[0]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[10]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[11]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[12]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[13]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[14]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[15]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[16]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[17]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[18]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[19]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[1]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[20]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[21]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[22]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[23]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[2]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[3]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[4]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[5]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[6]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[7]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[8]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[9]" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_endofpacket" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_ready" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_startofpacket" -section_id vfb_in
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_valid" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=28" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=28" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=28" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=105" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to vfb_in|vcc -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to vfb_in|gnd -section_id vfb_in
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to vfb_in|gnd -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=2048" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id vfb_in
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id vfb_in
 set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
 set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
 set_global_assignment -name QII_AUTO_PACKED_REGISTERS NORMAL
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
-set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_clock" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334529" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|clk" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[0]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[10]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[11]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[12]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[13]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[14]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[15]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[16]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[17]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[18]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[19]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[1]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[20]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[21]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[22]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[23]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[2]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[3]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[4]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[5]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[6]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[7]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[8]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[9]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[0]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[10]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[11]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[12]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[13]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[14]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[15]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[16]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[17]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[18]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[19]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[1]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[20]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[21]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[22]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[23]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[24]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[25]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[26]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[27]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[28]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[29]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[2]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[30]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[31]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[32]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[33]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[34]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[35]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[36]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[37]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[38]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[39]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[3]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[40]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[41]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[42]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[43]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[44]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[45]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[46]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[47]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[48]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[4]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[5]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[6]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[7]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[8]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[9]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_is_video_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_state.CONTROL" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_state.IDLE" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_state.VIDEO" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_mem_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[0]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[10]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[11]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[12]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[13]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[14]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[15]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[16]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[17]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[18]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[19]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[1]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[20]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[21]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[22]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[23]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[2]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[3]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[4]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[5]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[6]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[7]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[8]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_data[9]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|snk_video_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_mem_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[0]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[10]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[11]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[12]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[13]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[14]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[15]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[16]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[17]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[18]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[19]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[1]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[20]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[21]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[22]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[23]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[24]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[25]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[26]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[27]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[28]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[29]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[2]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[30]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[31]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[32]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[33]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[34]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[35]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[36]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[37]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[38]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[39]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[3]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[40]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[41]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[42]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[43]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[44]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[45]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[46]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[47]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[48]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[4]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[5]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[6]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[7]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[8]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_data[9]" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_eop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_ready" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|src_video_valid" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_is_video_sop" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_state.CONTROL" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_state.IDLE" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "soc_system:u0|gmm_fg_detector:gmm_fg_detector|writer_state.VIDEO" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=93" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=93" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=93" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334530" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=300" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to gmm_fg_detector|vcc -section_id gmm_fg_detector
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to gmm_fg_detector|gnd -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=512" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id gmm_fg_detector
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id gmm_fg_detector
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[0]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[10]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[11]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[12]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[13]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[14]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[15]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[16]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[17]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[18]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[19]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[1]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[20]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[21]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[22]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[23]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[24]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[25]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[26]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[27]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[28]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[29]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[2]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[30]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[31]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[3]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[4]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[5]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[6]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[7]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[8]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[9]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_read" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_readdatavalid" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_waitrequest" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[0]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[10]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[11]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[12]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[13]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[14]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[15]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[16]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[17]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[18]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[19]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[1]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[20]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[21]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[22]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[23]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[24]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[25]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[26]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[27]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[28]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[29]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[2]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[30]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[31]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[3]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[4]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[5]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[6]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[7]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[8]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[9]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_waitrequest" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_write" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_reset" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[0]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[10]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[11]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[12]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[13]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[14]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[15]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[16]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[17]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[18]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[19]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[1]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[20]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[21]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[22]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[23]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[24]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[25]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[26]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[27]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[28]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[29]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[2]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[30]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[31]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[3]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[4]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[5]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[6]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[7]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[8]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_address[9]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_read" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_readdatavalid" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_rd_waitrequest" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[0]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[10]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[11]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[12]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[13]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[14]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[15]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[16]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[17]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[18]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[19]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[1]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[20]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[21]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[22]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[23]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[24]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[25]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[26]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[27]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[28]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[29]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[2]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[30]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[31]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[3]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[4]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[5]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[6]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[7]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[8]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_address[9]" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_waitrequest" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_master_wr_write" -section_id vfb_gmm_in_out
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_gmm:alt_vip_cl_vfb_gmm|mem_reset" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=70" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=70" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=70" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=233" -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=512" -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to vfb_gmm_in_out|vcc -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to vfb_gmm_in_out|gnd -section_id vfb_gmm_in_out
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=512" -section_id vfb_gmm_in_out
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_clk" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[0]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[10]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[11]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[12]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[13]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[14]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[15]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[16]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[17]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[18]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[19]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[1]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[20]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[21]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[22]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[23]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[2]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[3]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[4]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[5]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[6]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[7]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[8]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[9]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_eop" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_ready" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_sop" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_valid" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[0]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[10]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[11]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[12]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[13]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[14]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[15]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[16]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[17]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[18]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[19]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[1]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[20]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[21]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[22]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[23]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[2]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[3]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[4]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[5]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[6]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[7]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[8]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[9]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_endofpacket" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_ready" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_startofpacket" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_valid" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[0]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[10]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[11]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[12]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[13]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[14]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[15]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[16]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[17]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[18]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[19]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[1]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[20]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[21]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[22]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[23]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[2]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[3]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[4]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[5]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[6]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[7]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[8]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_data[9]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_eop" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_ready" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_sop" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "soc_system:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|is_valid" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[0]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[10]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[11]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[12]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[13]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[14]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[15]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[16]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[17]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[18]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[19]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[1]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[20]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[21]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[22]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[23]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[2]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[3]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[4]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[5]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[6]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[7]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[8]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_data[9]" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_endofpacket" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_ready" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_startofpacket" -section_id vfb_in_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|din_valid" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=56" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=56" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=56" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=197" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=32768" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to vfb_in_debug|vcc -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to vfb_in_debug|gnd -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=32768" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id vfb_in_debug
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|clk" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_mem_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|snk_video_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_mem_valid" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_eop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_ready" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_sop" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "soc_system:u0|soc_system_gmm:gmm|gmm_fg_detector:gmm_fg_detector|src_video_valid" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=16" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=16" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=16" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334529" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=76" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=16384" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to vfb_gmm_in_out_debug|gnd -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to vfb_gmm_in_out_debug|vcc -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=16384" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id vfb_gmm_in_out_debug
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_clock" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_rd_read" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_rd_readdatavalid" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_rd_waitrequest" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_wr_waitrequest" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_wr_write" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_rd_read" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_rd_readdatavalid" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_rd_waitrequest" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_wr_waitrequest" -section_id gmm_fg_detector_debug
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "soc_system:u0|soc_system_alt_vip_cl_vfb_0:alt_vip_cl_vfb_0|mem_master_wr_write" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=5" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=5" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=5" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334530" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000000000000000000" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=44" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=32768" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to gmm_fg_detector_debug|gnd -section_id gmm_fg_detector_debug
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to gmm_fg_detector_debug|vcc -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=32768" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id gmm_fg_detector_debug
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id gmm_fg_detector_debug
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp2_auto_stripped.stp

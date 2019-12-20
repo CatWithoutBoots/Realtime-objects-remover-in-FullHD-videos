@@ -1,17 +1,18 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst soc_system.sysid -pg 1 -lvl 11 -y 330
+preplace inst soc_system.sysid -pg 1 -lvl 20 -y 310
 preplace inst soc_system.hps_ddr3.hps.gmac1 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.av_st_clk_bridge -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.av_mm_reset_bridge -pg 1
+preplace inst soc_system.gmm.out_dma.prefetcher_internal -pg 1
+preplace inst soc_system.st_adapter_1.rst_bridge_0 -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.video_in.reset_bridge -pg 1
-preplace inst soc_system.pll_0 -pg 1 -lvl 10 -y 550
+preplace inst soc_system.pll_0 -pg 1 -lvl 19 -y 550
 preplace inst soc_system.hps_ddr3.hps.i2c0 -pg 1
-preplace inst soc_system.pll_1 -pg 1 -lvl 10 -y 310
+preplace inst soc_system.pll_1 -pg 1 -lvl 19 -y 290
 preplace inst soc_system.hps_ddr3.hps.timer -pg 1
 preplace inst soc_system.hps_ddr3.hps.i2c1 -pg 1
-preplace inst soc_system -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst soc_system.hps_ddr3.hps.sysmgr -pg 1
+preplace inst soc_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst soc_system.gmm.in_dma.rst_inst -pg 1
 preplace inst soc_system.hps_ddr3.hps.arm_gic_0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.i2c2 -pg 1
 preplace inst soc_system.hps_ddr3.hps.i2c3 -pg 1
@@ -20,121 +21,122 @@ preplace inst soc_system.hps_ddr3.hps.axi_ocram -pg 1
 preplace inst soc_system.hps_ddr3.hps.timer1 -pg 1
 preplace inst soc_system.hps_ddr3.hps.timer2 -pg 1
 preplace inst soc_system.hps_ddr3.hps.timer3 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.pkt_trans_rd -pg 1
 preplace inst soc_system.hps_ddr3.hps.usb0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.f2s_periph_ref_clk -pg 1
 preplace inst soc_system.cpu.clock_bridge -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.video_out -pg 1
-preplace inst soc_system.clk_50 -pg 1 -lvl 9 -y 430
+preplace inst soc_system.clk_50 -pg 1 -lvl 18 -y 450
+preplace inst soc_system.st_adapter_1.clk_bridge_0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.usb1 -pg 1
+preplace inst soc_system.gmm.in_ram -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.video_in.clk_bridge -pg 1
 preplace inst soc_system.hps_ddr3.hps.eosc1 -pg 1
 preplace inst soc_system.hps_ddr3.hps.clkmgr -pg 1
 preplace inst soc_system.cpu.cpu -pg 1
 preplace inst soc_system.hps_ddr3.hps.eosc2 -pg 1
 preplace inst soc_system.hps_ddr3.hps.bridges -pg 1
-preplace inst soc_system.mm_clock_crossing_bridge -pg 1 -lvl 11 -y 430
+preplace inst soc_system.mm_clock_crossing_bridge -pg 1 -lvl 20 -y 430
 preplace inst soc_system.hps_ddr3.hps_reset_manager_0 -pg 1
+preplace inst soc_system.snk_video_adapter_0 -pg 1 -lvl 14 -y 200
+preplace inst soc_system.gmm.out_dma.read_mstr_internal -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.pkt_trans_rd -pg 1
 preplace inst soc_system.hps_ddr3.hps.nand0 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.wr_ctrl -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.av_st_reset_bridge -pg 1
+preplace inst soc_system.gmm.out_dma.cb_inst -pg 1
+preplace inst soc_system.gmm.out_ram -pg 1
 preplace inst soc_system.hps_ddr3.hps.L2 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_0 -pg 1 -lvl 7 -y 190
+preplace inst soc_system.alt_vip_cl_vfb_0 -pg 1 -lvl 16 -y 200
+preplace inst soc_system.gmm.mem_clk -pg 1
 preplace inst soc_system.hps_ddr3.hps.dcan0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.hps_io.border -pg 1
-preplace inst soc_system.cpu -pg 1 -lvl 10 -y 70
+preplace inst soc_system.cpu -pg 1 -lvl 19 -y 70
 preplace inst soc_system.hps_ddr3.hps.scu -pg 1
 preplace inst soc_system.hps_ddr3.hps.dcan1 -pg 1
 preplace inst soc_system.hps_ddr3.hps.spim0 -pg 1
+preplace inst soc_system.gmm.gmm_fg_detector -pg 1
 preplace inst soc_system.cpu.reset_bridge -pg 1
 preplace inst soc_system.hps_ddr3.hps.spim1 -pg 1
 preplace inst soc_system.hps_ddr3.hps.wd_timer0 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.pkt_trans_wr -pg 1
+preplace inst soc_system.gmm.in_dma -pg 1
 preplace inst soc_system.hps_ddr3.hps.wd_timer1 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.sync_ctrl -pg 1
 preplace inst soc_system.hps_ddr3.hps.uart0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.rstmgr -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.video_in.vid_back -pg 1
 preplace inst soc_system.hps_ddr3.hps.uart1 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.video_in -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.rd_ctrl -pg 1
 preplace inst soc_system.hps_ddr3.clock_bridge_0 -pg 1
+preplace inst soc_system.gmm.out_dma.rst_inst -pg 1
+preplace inst soc_system.gmm.in_dma.prefetcher_internal -pg 1
 preplace inst soc_system.hps_ddr3.hps.f2s_sdram_ref_clk -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.av_mm_clk_bridge -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.av_st_reset_bridge -pg 1
 preplace inst soc_system.hps_ddr3.hps -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.av_mm_reset_bridge -pg 1
-preplace inst soc_system.dc_fifo_from_gmm -pg 1 -lvl 13 -y 710
+preplace inst soc_system.dc_fifo_from_gmm -pg 1 -lvl 22 -y 610
 preplace inst soc_system.alt_vip_cl_vfb_0.av_st_clk_bridge -pg 1
 preplace inst soc_system.hps_ddr3.hps.fpgamgr -pg 1
 preplace inst soc_system.hps_ddr3.hps.axi_sdram -pg 1
+preplace inst soc_system.gmm -pg 1 -lvl 12 -y 520
 preplace inst soc_system.alt_vip_cl_vfb_0.sync_ctrl -pg 1
 preplace inst soc_system.hps_ddr3.hps.l3regs -pg 1
-preplace inst soc_system.TERASIC_CAMERA_0 -pg 1 -lvl 6 -y 770
+preplace inst soc_system.gmm.out_dma.dispatcher_internal -pg 1
+preplace inst soc_system.TERASIC_CAMERA_0 -pg 1 -lvl 6 -y 790
 preplace inst soc_system.alt_vip_cl_vfb_0.video_in -pg 1
 preplace inst soc_system.hps_ddr3.hps.arm_a9_0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.fpga_interfaces -pg 1
 preplace inst soc_system.hps_ddr3.hps.gpio0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.arm_a9_1 -pg 1
+preplace inst soc_system.gmm.in_dma.write_mstr_internal -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.pkt_trans_wr -pg 1
+preplace inst soc_system.gmm.out_dma -pg 1
 preplace inst soc_system.hps_ddr3.hps.gpio1 -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.video_in.clk_bridge -pg 1
 preplace inst soc_system.hps_ddr3.hps.dma -pg 1
 preplace inst soc_system.hps_ddr3.clk_50 -pg 1
 preplace inst soc_system.hps_ddr3.hps.gpio2 -pg 1
+preplace inst soc_system.gmm.reset_bridge_0 -pg 1
 preplace inst soc_system.hps_ddr3.address_span_extender_0 -pg 1
-preplace inst soc_system.timing_adapter_0 -pg 1 -lvl 15 -y 920
-preplace inst soc_system.alt_vip_cl_vfb_gmm.video_out -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm -pg 1 -lvl 11 -y 710
-preplace inst soc_system.hps_ddr3 -pg 1 -lvl 6 -y 430
-preplace inst soc_system.jtag_uart -pg 1 -lvl 11 -y 110
+preplace inst soc_system.hps_ddr3 -pg 1 -lvl 6 -y 450
+preplace inst soc_system.jtag_uart -pg 1 -lvl 20 -y 110
 preplace inst soc_system.hps_ddr3.hps.sdmmc -pg 1
+preplace inst soc_system.gmm.gmm_fg_visor -pg 1
+preplace inst soc_system.gmm.in_dma.dispatcher_internal -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.video_in.vid_front -pg 1
-preplace inst soc_system.alt_vip_itc_0 -pg 1 -lvl 16 -y 410
+preplace inst soc_system.alt_vip_itc_0 -pg 1 -lvl 25 -y 410
+preplace inst soc_system.st_adapter_1 -pg 1 -lvl 15 -y 180
+preplace inst soc_system.gmm.in_dma.cb_inst -pg 1
 preplace inst soc_system.alt_vip_cl_vfb_0.wr_ctrl -pg 1
 preplace inst soc_system.hps_ddr3.hps.hps_io -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.video_in.vid_front -pg 1
-preplace inst soc_system.cpu_ram -pg 1 -lvl 11 -y 230
-preplace inst soc_system.alt_vip_cl_vfb_gmm.video_in.vid_back -pg 1
-preplace inst soc_system.alt_vip_cl_vfb_gmm.video_in.reset_bridge -pg 1
-preplace inst soc_system.dc_fifo_to_gmm -pg 1 -lvl 11 -y 850
-preplace inst soc_system.alt_vip_cl_vfb_gmm.av_mm_clk_bridge -pg 1
+preplace inst soc_system.st_adapter_1.timing_adapter_0 -pg 1
+preplace inst soc_system.cpu_ram -pg 1 -lvl 20 -y 210
+preplace inst soc_system.dc_fifo_to_gmm -pg 1 -lvl 20 -y 860
 preplace inst soc_system.hps_ddr3.hps.clk_0 -pg 1
 preplace inst soc_system.hps_ddr3.hps.qspi -pg 1
-preplace inst soc_system.gmm_fg_visor -pg 1 -lvl 14 -y 920
-preplace inst soc_system.gmm_fg_detector -pg 1 -lvl 12 -y 670
-preplace inst soc_system.alt_vip_cl_vfb_gmm.rd_ctrl -pg 1
 preplace inst soc_system.hps_ddr3.hps.sdrctl -pg 1
 preplace inst soc_system.hps_ddr3.hps.gmac0 -pg 1
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_0.main_clock,(SLAVE)dc_fifo_to_gmm.in_clk,(SLAVE)alt_vip_itc_0.is_clk_rst,(SLAVE)gmm_fg_visor.clk,(SLAVE)dc_fifo_from_gmm.out_clk,(MASTER)pll_0.outclk0,(SLAVE)TERASIC_CAMERA_0.clock_reset,(SLAVE)timing_adapter_0.clk) 1 5 11 1250 680 1810 660 NJ 660 NJ 660 NJ 660 3060 560 NJ 560 3740 840 3930 890 4110 890 4270
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)TERASIC_CAMERA_0.conduit_end,(SLAVE)soc_system.terasic_camera_0_conduit_end) 1 0 6 NJ 740 NJ 700 NJ 700 NJ 700 NJ 700 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.memory,(SLAVE)hps_ddr3.memory) 1 0 6 NJ 630 NJ 630 NJ 630 NJ 630 NJ 630 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk_hdmi_ref,(SLAVE)pll_1.refclk) 1 0 10 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 320 NJ 320 NJ
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(MASTER)clk_50.clk_reset,(SLAVE)alt_vip_cl_vfb_gmm.main_reset,(SLAVE)dc_fifo_from_gmm.in_clk_reset,(SLAVE)pll_0.reset,(SLAVE)gmm_fg_detector.rst,(SLAVE)dc_fifo_to_gmm.in_clk_reset,(SLAVE)sysid.reset,(SLAVE)dc_fifo_to_gmm.out_clk_reset,(SLAVE)jtag_uart.reset,(MASTER)hps_ddr3.h2f_reset,(SLAVE)alt_vip_cl_vfb_0.mem_reset,(SLAVE)mm_clock_crossing_bridge.s0_reset,(SLAVE)alt_vip_cl_vfb_gmm.mem_reset,(SLAVE)cpu_ram.reset1,(SLAVE)timing_adapter_0.reset,(SLAVE)cpu.reset,(SLAVE)mm_clock_crossing_bridge.m0_reset,(SLAVE)dc_fifo_from_gmm.out_clk_reset,(SLAVE)gmm_fg_visor.rst,(SLAVE)TERASIC_CAMERA_0.clock_reset_reset,(SLAVE)alt_vip_cl_vfb_0.main_reset,(SLAVE)alt_vip_itc_0.is_clk_rst_reset,(SLAVE)pll_1.reset) 1 5 11 1270 700 1850 460 NJ 460 NJ 500 2640 720 3080 650 3510 650 3700 910 3950 910 4090 910 4310
-preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)cpu.debug_mem_slave,(SLAVE)mm_clock_crossing_bridge.s0,(SLAVE)sysid.control_slave,(MASTER)cpu.instruction_master,(SLAVE)cpu_ram.s1,(MASTER)cpu.data_master,(SLAVE)jtag_uart.avalon_jtag_slave) 1 9 2 2680 30 3040
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)alt_vip_itc_0.din,(MASTER)timing_adapter_0.out) 1 15 1 4290
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)gmm_fg_visor.snk,(MASTER)dc_fifo_from_gmm.out) 1 13 1 3910
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.gmm_fg_visor_sw,(SLAVE)gmm_fg_visor.sw) 1 0 14 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)pll_0.refclk,(SLAVE)mm_clock_crossing_bridge.s0_clk,(SLAVE)sysid.clk,(SLAVE)cpu_ram.clk1,(SLAVE)cpu.clk,(MASTER)clk_50.clk,(SLAVE)jtag_uart.clk) 1 9 2 2660 500 3060
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.alt_vip_itc_0_clocked_video,(SLAVE)alt_vip_itc_0.clocked_video) 1 0 16 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 480 NJ 480 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)gmm_fg_detector.snk_mem,(MASTER)alt_vip_cl_vfb_gmm.dout) 1 11 1 N
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)dc_fifo_to_gmm.in,(MASTER)alt_vip_cl_vfb_0.dout) 1 7 4 2200 860 NJ 860 NJ 860 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)timing_adapter_0.in,(MASTER)gmm_fg_visor.src) 1 14 1 N
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)gmm_fg_detector.src_mem,(SLAVE)alt_vip_cl_vfb_gmm.din) 1 10 3 3140 670 NJ 800 3680
-preplace netloc FAN_IN<net_container>soc_system</net_container>(MASTER)alt_vip_cl_vfb_gmm.mem_master_rd,(SLAVE)hps_ddr3.hps_f2h_sdram0_data,(MASTER)alt_vip_cl_vfb_0.mem_master_wr,(MASTER)alt_vip_cl_vfb_gmm.mem_master_wr,(MASTER)alt_vip_cl_vfb_0.mem_master_rd) 1 5 7 1270 390 NJ 390 2180 700 NJ 700 NJ 700 NJ 630 3430
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.hps_0_hps_io,(SLAVE)hps_ddr3.hps_0_hps_io) 1 0 6 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk,(SLAVE)clk_50.clk_in) 1 0 9 NJ 150 NJ 150 NJ 150 NJ 150 NJ 150 NJ 150 NJ 150 NJ 150 NJ
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.clk_hps_ref,(SLAVE)hps_ddr3.clk) 1 0 6 NJ 440 NJ 440 NJ 440 NJ 440 NJ 440 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)dc_fifo_from_gmm.in,(MASTER)gmm_fg_detector.src_video) 1 12 1 N
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)TERASIC_CAMERA_0.avalon_streaming_source,(SLAVE)alt_vip_cl_vfb_0.din) 1 6 1 1830
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.clk_hdmi,(MASTER)pll_1.outclk0) 1 10 7 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)cpu.irq,(SLAVE)jtag_uart.irq) 1 10 1 N
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)gmm_fg_detector.cpu,(MASTER)mm_clock_crossing_bridge.m0) 1 11 1 3490
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_0.mem_clock,(MASTER)pll_0.outclk2,(SLAVE)hps_ddr3.hps_f2h_sdram0_clock,(SLAVE)alt_vip_cl_vfb_gmm.mem_clock) 1 5 6 1250 370 1890 680 NJ 680 NJ 680 NJ 680 3040
-preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_50.clk_in_reset,(SLAVE)soc_system.reset) 1 0 9 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 650 NJ 440 NJ 440 NJ
-preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)gmm_fg_detector.snk_video,(MASTER)dc_fifo_to_gmm.out) 1 11 1 3490
-preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)pll_0.outclk3,(SLAVE)mm_clock_crossing_bridge.m0_clk,(SLAVE)alt_vip_cl_vfb_gmm.main_clock,(SLAVE)gmm_fg_detector.clock,(SLAVE)dc_fifo_to_gmm.out_clk,(SLAVE)dc_fifo_from_gmm.in_clk) 1 10 3 3100 610 3470 630 3720
-preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)soc_system.clk_d8m,(MASTER)pll_0.outclk1) 1 10 7 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ
-levelinfo -pg 1 0 180 4550
-levelinfo -hier soc_system 190 210 450 820 990 1210 1500 2000 2320 2470 2800 3270 3560 3770 3990 4160 4340 4470
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.terasic_camera_0_conduit_end,(SLAVE)TERASIC_CAMERA_0.conduit_end) 1 0 6 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)pll_0.outclk1,(MASTER)soc_system.clk_d8m) 1 19 7 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.gmm_fg_visor_sw,(SLAVE)gmm.gmm_fg_visor_sw) 1 0 12 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_ddr3.clk,(SLAVE)soc_system.clk_hps_ref) 1 0 6 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)alt_vip_itc_0.clocked_video,(SLAVE)soc_system.alt_vip_itc_0_clocked_video) 1 0 25 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 460 NJ 460 NJ 460 NJ 460 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)gmm.src_video,(SLAVE)dc_fifo_from_gmm.in) 1 12 10 N 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 540 NJ 620 NJ 620 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)TERASIC_CAMERA_0.avalon_streaming_source,(SLAVE)dc_fifo_to_gmm.in) 1 6 14 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ 820 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.memory,(SLAVE)hps_ddr3.memory) 1 0 6 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)pll_1.refclk,(SLAVE)soc_system.clk_hdmi_ref) 1 0 19 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 300 NJ 300 NJ
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)snk_video_adapter_0.rst,(MASTER)hps_ddr3.h2f_reset,(SLAVE)cpu.reset,(SLAVE)st_adapter_1.in_rst_0,(SLAVE)alt_vip_itc_0.is_clk_rst_reset,(SLAVE)jtag_uart.reset,(SLAVE)dc_fifo_to_gmm.out_clk_reset,(SLAVE)dc_fifo_from_gmm.out_clk_reset,(SLAVE)cpu_ram.reset1,(MASTER)clk_50.clk_reset,(SLAVE)alt_vip_cl_vfb_0.mem_reset,(SLAVE)sysid.reset,(SLAVE)mm_clock_crossing_bridge.m0_reset,(SLAVE)dc_fifo_to_gmm.in_clk_reset,(SLAVE)dc_fifo_from_gmm.in_clk_reset,(SLAVE)pll_1.reset,(SLAVE)mm_clock_crossing_bridge.s0_reset,(SLAVE)alt_vip_cl_vfb_0.main_reset,(SLAVE)pll_0.reset,(SLAVE)TERASIC_CAMERA_0.clock_reset_reset,(SLAVE)gmm.rst) 1 5 20 1250 880 1790 610 NJ 610 NJ 610 NJ 610 NJ 610 3490 480 NJ 570 4030 190 4350 280 4600 360 NJ 340 NJ 340 5250 440 5750 700 NJ 700 6090 580 NJ 580 NJ 580 6380
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(SLAVE)TERASIC_CAMERA_0.clock_reset,(SLAVE)alt_vip_itc_0.is_clk_rst,(SLAVE)alt_vip_cl_vfb_0.main_clock,(MASTER)pll_0.outclk0,(SLAVE)snk_video_adapter_0.clk,(SLAVE)dc_fifo_from_gmm.out_clk,(SLAVE)st_adapter_1.in_clk_0,(SLAVE)dc_fifo_to_gmm.in_clk) 1 5 20 1250 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 NJ 780 4010 170 4370 140 4580 560 NJ 560 NJ 560 NJ 520 5690 640 NJ 640 6070 560 NJ 560 NJ 560 6360
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)soc_system.reset,(SLAVE)clk_50.clk_in_reset) 1 0 18 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)snk_video_adapter_0.src,(SLAVE)st_adapter_1.in_0) 1 14 1 N
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)clk_50.clk_in,(SLAVE)soc_system.clk) 1 0 18 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 380 NJ 380 NJ 380 NJ 380 NJ 360 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)pll_0.outclk3,(SLAVE)dc_fifo_from_gmm.in_clk,(SLAVE)alt_vip_cl_vfb_0.mem_clock,(SLAVE)dc_fifo_to_gmm.out_clk,(SLAVE)mm_clock_crossing_bridge.m0_clk,(SLAVE)hps_ddr3.hps_f2h_sdram0_clock,(SLAVE)gmm.mem_clk) 1 5 17 1250 590 NJ 590 NJ 590 NJ 590 NJ 590 NJ 590 3470 460 NJ 520 NJ 520 NJ 520 4620 520 NJ 520 NJ 520 NJ 480 5770 680 NJ 680 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)alt_vip_cl_vfb_0.din,(MASTER)st_adapter_1.out_0) 1 15 1 N
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)dc_fifo_to_gmm.out,(SLAVE)gmm.snk_video) 1 11 10 3510 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 NJ 990 6010
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)alt_vip_cl_vfb_0.dout,(SLAVE)alt_vip_itc_0.din) 1 16 9 4930 380 NJ 380 NJ 380 NJ 400 NJ 440 NJ 440 NJ 440 NJ 440 NJ
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(SLAVE)gmm.gmm_fg_detector_cpu,(MASTER)mm_clock_crossing_bridge.m0) 1 11 10 3510 440 NJ 440 NJ 440 NJ 440 NJ 540 NJ 540 NJ 540 NJ 500 NJ 560 6010
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)dc_fifo_from_gmm.out,(SLAVE)snk_video_adapter_0.snk) 1 13 10 4050 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 600 6280
+preplace netloc INTERCONNECT<net_container>soc_system</net_container>(SLAVE)jtag_uart.avalon_jtag_slave,(MASTER)cpu.instruction_master,(MASTER)cpu.data_master,(SLAVE)sysid.control_slave,(SLAVE)cpu.debug_mem_slave,(SLAVE)mm_clock_crossing_bridge.s0,(SLAVE)cpu_ram.s1) 1 18 2 5310 30 5710
+preplace netloc EXPORT<net_container>soc_system</net_container>(MASTER)pll_1.outclk0,(MASTER)soc_system.clk_hdmi) 1 19 7 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ
+preplace netloc FAN_OUT<net_container>soc_system</net_container>(MASTER)clk_50.clk,(SLAVE)cpu.clk,(SLAVE)mm_clock_crossing_bridge.s0_clk,(SLAVE)sysid.clk,(SLAVE)pll_0.refclk,(SLAVE)jtag_uart.clk,(SLAVE)cpu_ram.clk1) 1 18 2 5290 460 5730
+preplace netloc POINT_TO_POINT<net_container>soc_system</net_container>(MASTER)cpu.irq,(SLAVE)jtag_uart.irq) 1 19 1 N
+preplace netloc EXPORT<net_container>soc_system</net_container>(SLAVE)hps_ddr3.hps_0_hps_io,(SLAVE)soc_system.hps_0_hps_io) 1 0 6 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ
+preplace netloc FAN_IN<net_container>soc_system</net_container>(MASTER)alt_vip_cl_vfb_0.mem_master_wr,(SLAVE)hps_ddr3.hps_f2h_sdram0_data,(MASTER)gmm.mem_write,(MASTER)gmm.mem_read,(MASTER)alt_vip_cl_vfb_0.mem_master_rd) 1 5 12 1230 390 NJ 390 NJ 390 NJ 390 NJ 390 NJ 390 NJ 420 3920 340 NJ 340 NJ 340 NJ 340 4870
+levelinfo -pg 1 0 180 6620
+levelinfo -hier soc_system 190 210 450 820 990 1210 1500 2040 2420 2610 2980 3430 3740 3990 4230 4440 4710 4970 5040 5430 5850 6030 6140 6300 6320 6410 6540

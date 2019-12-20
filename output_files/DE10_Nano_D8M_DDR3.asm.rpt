@@ -1,6 +1,6 @@
 Assembler report for DE10_Nano_D8M_DDR3
-Mon Oct 07 21:31:28 2019
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 Patches 0.01std SJ Standard Edition
+Thu Dec 05 18:51:43 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -11,7 +11,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 Patches 0.01std SJ Standard Ed
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof
+  6. Assembler Device Options: D:/trash/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Oct 07 21:31:28 2019 ;
+; Assembler Status      ; Successful - Thu Dec 05 18:51:43 2019 ;
 ; Revision Name         ; DE10_Nano_D8M_DDR3                    ;
 ; Top-level Entity Name ; DE10_Nano_D8M_DDR3                    ;
 ; Family                ; Cyclone V                             ;
@@ -66,23 +66,23 @@ refer to the applicable agreement for further details.
 +--------+----------------------------------------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                   ;
-+---------------------------------------------------------------------------------------------+
-; File Name                                                                                   ;
-+---------------------------------------------------------------------------------------------+
-; D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof ;
-+---------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                      ;
++------------------------------------------------------------------------------------------------+
+; File Name                                                                                      ;
++------------------------------------------------------------------------------------------------+
+; D:/trash/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof ;
++------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof ;
-+----------------+------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                              ;
-+----------------+------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0A597F3C                                                                                           ;
-; Checksum       ; 0x0A597F3C                                                                                           ;
-+----------------+------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/trash/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof ;
++----------------+---------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                 ;
++----------------+---------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0FD27F5C                                                                                              ;
+; Checksum       ; 0x0FD27F5C                                                                                              ;
++----------------+---------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -90,19 +90,19 @@ refer to the applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 18.1.0 Build 625 09/12/2018 Patches 0.01std SJ Standard Edition
-    Info: Processing started: Mon Oct 07 21:30:56 2019
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Dec 05 18:51:10 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE10_Nano_D8M_DDR3 -c DE10_Nano_D8M_DDR3
 Info (115030): Assembler is generating device programming files
 Info (115017): Design contains a time-limited core -- only a single, time-limited programming file can be generated
 Warning (210042): Can't convert time-limited SOF into POF, HEX File, TTF, or RBF
-Warning (210039): File D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof contains one or more time-limited megafunctions that support the Intel FPGA IP Evaluation Mode feature that will not work after the hardware evaluation time expires. Refer to the Messages window for evaluation time details.
-Info (210040): SRAM Object File D:/vc/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof contains time-limited megafunction that supports Intel FPGA IP Evaluation Mode feature -- Vendor: 0x6AF7, Product: 0x00EE
+Warning (210039): File D:/trash/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof contains one or more time-limited megafunctions that support the Intel FPGA IP Evaluation Mode feature that will not work after the hardware evaluation time expires. Refer to the Messages window for evaluation time details.
+Info (210040): SRAM Object File D:/trash/InnovateFPGA/FPGA/DE10_Nano_D8M_DDR3/output_files/DE10_Nano_D8M_DDR3_time_limited.sof contains time-limited megafunction that supports Intel FPGA IP Evaluation Mode feature -- Vendor: 0x6AF7, Product: 0x00EE
 Info (11878): Hard Processor Subsystem configuration has not changed and a Preloader software update is not required
 Info: Quartus Prime Assembler was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 1467 megabytes
-    Info: Processing ended: Mon Oct 07 21:31:29 2019
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 1403 megabytes
+    Info: Processing ended: Thu Dec 05 18:51:44 2019
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:34
 
 

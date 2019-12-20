@@ -1,0 +1,26 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst gmm.out_dma -pg 1 -lvl 2 -y 440
+preplace inst gmm.in_dma.rst_inst -pg 1
+preplace inst gmm.reset_bridge_0 -pg 1 -lvl 1 -y 740
+preplace inst gmm.in_dma.cb_inst -pg 1
+preplace inst gmm.gmm_fg_visor_0 -pg 1 -lvl 2 -y 210
+preplace inst gmm.out_ram -pg 1 -lvl 2 -y 600
+preplace inst gmm.out_dma.dispatcher_internal -pg 1
+preplace inst gmm.in_dma -pg 1 -lvl 2 -y 50
+preplace inst gmm.gmm_fg_detector_0 -pg 1 -lvl 2 -y 700
+preplace inst gmm.out_dma.cb_inst -pg 1
+preplace inst gmm.in_dma.write_mstr_internal -pg 1
+preplace inst gmm.out_dma.write_mstr_internal -pg 1
+preplace inst gmm.out_dma.rst_inst -pg 1
+preplace inst gmm.mem_clk -pg 1 -lvl 1 -y 700
+preplace inst gmm -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst gmm.out_dma.prefetcher_internal -pg 1
+preplace inst gmm.in_ram -pg 1 -lvl 2 -y 310
+preplace inst gmm.in_dma.dispatcher_internal -pg 1
+preplace inst gmm.in_dma.prefetcher_internal -pg 1
+preplace netloc EXPORT<net_container>gmm</net_container>(SLAVE)reset_bridge_0.in_reset,(SLAVE)gmm.rst) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>gmm</net_container>(SLAVE)gmm_fg_detector_0.rst,(MASTER)reset_bridge_0.out_reset) 1 1 1 NJ
+preplace netloc FAN_OUT<net_container>gmm</net_container>(SLAVE)gmm_fg_visor_0.clk,(MASTER)mem_clk.out_clk,(SLAVE)gmm_fg_detector_0.clock,(SLAVE)out_dma.clock,(SLAVE)in_ram.clk1,(SLAVE)out_ram.clk1,(SLAVE)in_dma.clock) 1 1 1 220
+levelinfo -pg 1 0 30 560
+levelinfo -hier gmm 40 70 330 550

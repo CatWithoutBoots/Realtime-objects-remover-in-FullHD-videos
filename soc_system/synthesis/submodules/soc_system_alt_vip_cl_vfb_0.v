@@ -16,7 +16,7 @@ module soc_system_alt_vip_cl_vfb_0 #(
 		parameter MAX_HEIGHT                   = 1080,
 		parameter CLOCKS_ARE_SEPARATE          = 1,
 		parameter MEM_PORT_WIDTH               = 128,
-		parameter MEM_BASE_ADDR                = 0,
+		parameter MEM_BASE_ADDR                = 66356320,
 		parameter BURST_ALIGNMENT              = 1,
 		parameter WRITE_FIFO_DEPTH             = 512,
 		parameter WRITE_BURST_TARGET           = 64,
@@ -222,7 +222,7 @@ module soc_system_alt_vip_cl_vfb_0 #(
 			instantiated_with_wrong_parameters_error_see_comment_above
 					mem_port_width_check ( .error(1'b1) );
 		end
-		if (MEM_BASE_ADDR != 0)
+		if (MEM_BASE_ADDR != 66356320)
 		begin
 			initial begin
 				$display("Generated module instantiated with wrong parameters");
@@ -752,7 +752,7 @@ module soc_system_alt_vip_cl_vfb_0 #(
 		.REPEAT_FRAMES            (1),
 		.DROP_REPEAT_USER         (0),
 		.MULTI_FRAME_DELAY        (1),
-		.MEM_BASE_ADDR            (0),
+		.MEM_BASE_ADDR            (66356320),
 		.USER_PACKETS_MAX_STORAGE (1),
 		.MAX_SYMBOLS_PER_PACKET   (12),
 		.INTERLACED_SUPPORT       (0),

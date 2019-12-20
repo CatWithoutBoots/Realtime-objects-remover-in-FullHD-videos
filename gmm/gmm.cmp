@@ -1,0 +1,37 @@
+	component gmm is
+		port (
+			rst_reset                      : in  std_logic                      := 'X';             -- reset
+			mem_clk_clk                    : in  std_logic                      := 'X';             -- clk
+			mem_write_address              : out std_logic_vector(31 downto 0);                     -- address
+			mem_write_write                : out std_logic;                                         -- write
+			mem_write_byteenable           : out std_logic_vector(15 downto 0);                     -- byteenable
+			mem_write_writedata            : out std_logic_vector(127 downto 0);                    -- writedata
+			mem_write_waitrequest          : in  std_logic                      := 'X';             -- waitrequest
+			mem_write_burstcount           : out std_logic_vector(6 downto 0);                      -- burstcount
+			mem_read_address               : out std_logic_vector(31 downto 0);                     -- address
+			mem_read_read                  : out std_logic;                                         -- read
+			mem_read_byteenable            : out std_logic_vector(15 downto 0);                     -- byteenable
+			mem_read_readdata              : in  std_logic_vector(127 downto 0) := (others => 'X'); -- readdata
+			mem_read_waitrequest           : in  std_logic                      := 'X';             -- waitrequest
+			mem_read_readdatavalid         : in  std_logic                      := 'X';             -- readdatavalid
+			mem_read_burstcount            : out std_logic_vector(6 downto 0);                      -- burstcount
+			gmm_fg_visor_sw_extern         : in  std_logic_vector(1 downto 0)   := (others => 'X'); -- extern
+			gmm_fg_detector_cpu_write      : in  std_logic                      := 'X';             -- write
+			gmm_fg_detector_cpu_read       : in  std_logic                      := 'X';             -- read
+			gmm_fg_detector_cpu_writedata  : in  std_logic_vector(31 downto 0)  := (others => 'X'); -- writedata
+			gmm_fg_detector_cpu_readdata   : out std_logic_vector(31 downto 0);                     -- readdata
+			gmm_fg_detector_cpu_address    : in  std_logic_vector(3 downto 0)   := (others => 'X'); -- address
+			gmm_fg_detector_cpu_chipselect : in  std_logic                      := 'X';             -- chipselect
+			snk_video_data                 : in  std_logic_vector(23 downto 0)  := (others => 'X'); -- data
+			snk_video_endofpacket          : in  std_logic                      := 'X';             -- endofpacket
+			snk_video_ready                : out std_logic;                                         -- ready
+			snk_video_startofpacket        : in  std_logic                      := 'X';             -- startofpacket
+			snk_video_valid                : in  std_logic                      := 'X';             -- valid
+			src_video_data                 : out std_logic_vector(23 downto 0);                     -- data
+			src_video_endofpacket          : out std_logic;                                         -- endofpacket
+			src_video_ready                : in  std_logic                      := 'X';             -- ready
+			src_video_startofpacket        : out std_logic;                                         -- startofpacket
+			src_video_valid                : out std_logic                                          -- valid
+		);
+	end component gmm;
+

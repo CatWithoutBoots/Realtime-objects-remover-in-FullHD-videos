@@ -105,8 +105,8 @@ module gmm_fg_visor(
                     case (sw)
                     2'b00: src_data <= in.new_pixel;
                     2'b01: src_data <= in.is_fg ? 24'hFFFFFF : 24'h000000;
-                    2'b10: src_data <= in.mem_pixel;
-                    2'b11: src_data <= in.new_pixel; // for future
+					2'b10: src_data <= in.mem_pixel;
+                    2'b11: src_data <= {in.new_pixel.b, in.new_pixel.g, in.new_pixel.r}; // for future
                     endcase
                 else
                     src_data <= in.new_pixel;

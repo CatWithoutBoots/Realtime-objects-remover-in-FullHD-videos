@@ -3,16 +3,15 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces" showClockDomains="0" showResetDomains="0">
   <columns>
-   <connections preferredWidth="463" />
-   <irq preferredWidth="34" />
+   <connections preferredWidth="415" />
+   <irq preferredWidth="47" />
    <name preferredWidth="244" />
    <description preferredWidth="314" />
    <inputclock preferredWidth="192" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Basic Functions/Simulation; Debug and Verification/Simulation,Library,Project,Library/Basic Functions/Bridges and Adaptors,Library/Basic Functions/Simulation; Debug and Verification,Library/Basic Functions/Bridges and Adaptors/Streaming,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library/Basic Functions" />
- <window width="1936" height="1056" x="1912" y="-8" />
+ <library expandedCategories="Library,Project" />
+ <window width="1936" height="1056" x="-8" y="-8" />
  <hdlexample language="VERILOG" />
  <generation block_symbol_file="0" />
 </preferences>

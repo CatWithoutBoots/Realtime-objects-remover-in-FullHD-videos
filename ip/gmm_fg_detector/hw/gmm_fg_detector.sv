@@ -34,7 +34,15 @@
 
 // memory buffer must be cleared to zero before work 
 // gaussian_mixture_model_foreground_detector
-module gmm_fg_detector( 
+module gmm_fg_detector #(
+	FRAMES_NUM = 2, // max 8
+
+    VIDEO_START_ADDR = 0,
+    VIDEO_SPAN_BYTES = 33177600, // 1920x1080x(128/8), prefere bank_size of memory
+
+    CONTROL_START_ADDR = FRAMES_NUM * VIDEO_SPAN_BYTES,
+    CONTROL_SPAN_BYTES = 32
+)( 
 	// **************** Clocks & Resets Wires ****************
 	input clk, rst,
 	
@@ -43,6 +51,27 @@ module gmm_fg_detector(
 	input[3:0] cpu_addr,
 	input[31:0] cpu_writedata,
 	output logic[31:0] cpu_readdata,
+
+	// **************** DMA Control ****************
+	input[255:0] in_ram_readdata,
+	output logic in_ram_write, in_ram_read,
+    output logic[255:0] in_ram_writedata,
+    output logic[5:0] in_ram_addr,
+    
+	input[31:0] in_pref_readdata,
+    output logic in_pref_write, in_pref_read,
+    output logic[31:0] in_pref_writedata,
+    output logic[2:0] in_pref_addr,
+
+	input[255:0] out_ram_readdata,
+    output logic out_ram_write, out_ram_read,
+    output logic[255:0] out_ram_writedata,
+    output logic[5:0] out_ram_addr,
+    
+	input[31:0] out_pref_readdata,
+    output logic out_pref_write, out_pref_read,
+    output logic[31:0] out_pref_writedata,
+    output logic[2:0] out_pref_addr,
 
 	// **************** Input Avalon-ST ****************
 	input snk_video_valid, snk_video_sop, snk_video_eop,
@@ -146,10 +175,10 @@ module gmm_fg_detector(
 	typedef struct packed {
 		class_ac_int_9  is_fg;
 		struct_rgb_t  rgb_new;
-		struct_cluster_t [2:0]  cluster;
 		class_ac_int_6  u;
 		class_ac_int_6  chm;
 		class_ac_int_3  clusters_num;
+		struct_cluster_t [2:0]  cluster;
 	} struct_data_t;
 
 	typedef struct {
@@ -215,6 +244,11 @@ module gmm_fg_detector(
 			cpu_readdata = 'z;
 	end
 
+	assign in_ram_read = '0;
+	assign in_pref_read = '0;
+	assign out_ram_read = '0;
+	assign out_pref_read = '0;
+
 	// **************** Main logics ****************
 	always_ff @(posedge clk or posedge rst)
 		if (rst)
@@ -258,24 +292,22 @@ module gmm_fg_detector(
 			in_cmd.data.packet <= IDLE;
 		end
 		else begin
-			if (snk_video_sop && snk_video_valid && snk_video_ready && ((CONTROL == reader_next) || (VIDEO == reader_next)))
+			if (snk_video_sop && snk_video_valid && snk_video_ready && ((4'h0 == snk_video_data[3:0]) || (4'hF == snk_video_data[3:0])))
 				in_cmd.valid <= '1;
 			else if (in_cmd.ready)
 				in_cmd.valid <= '0;
 
-			if (VIDEO == reader_next) begin
-				if (snk_video_sop && snk_video_valid && snk_video_ready) begin
-					in_cmd.data.packet <= reader_next;
+			if (snk_video_sop && snk_video_valid && snk_video_ready) begin
+				if (4'h0 == snk_video_data[3:0]) begin
+					in_cmd.data.packet <= VIDEO;
 					in_cmd.data.width <= width;
 					in_cmd.data.height <= height;
 				end
-			end
-			else if (CONTROL == reader_next) begin
-				if (snk_video_sop && snk_video_valid && snk_video_ready) begin
-					in_cmd.data.packet <= reader_next;
+				else begin
+					in_cmd.data.packet <= CONTROL;
 					in_cmd.data.width <= '0;
 					in_cmd.data.height <= '0;
-				end	
+				end
 			end
 		end
 
@@ -291,12 +323,16 @@ module gmm_fg_detector(
 			else
 				reader_next = IDLE;
 		CONTROL:
-			if (in_control.eop && in_control.valid && in_control.ready)
+			if (snk_video_sop && snk_video_valid && snk_video_ready && (4'h0 == snk_video_data[3:0]))
+				reader_next = VIDEO;
+			else if (in_control.eop && in_control.valid && in_control.ready)
 				reader_next = IDLE;
-			else
-				reader_next = CONTROL;
+			else 
+				reader_next = CONTROL;	
 		VIDEO:
-			if (in_gmm.eop && in_gmm.valid && in_gmm.ready)
+			if (snk_video_sop && snk_video_valid && snk_video_ready && (4'hF == snk_video_data[3:0]))
+				reader_next = CONTROL;
+			else if (in_video.eop && in_video.valid && in_video.ready)
 				reader_next = IDLE;
 			else
 				reader_next = VIDEO;
@@ -349,7 +385,7 @@ module gmm_fg_detector(
 				in_control.valid <= '0;
 			if (in_gmm.ready)
 				in_gmm.valid <= '0;
-
+			
 			case (reader_state)
 			CONTROL: begin
 				if (in_video.valid)
@@ -522,7 +558,7 @@ module gmm_fg_detector(
 					src_mem_valid <= '1;
 
 					if (src_mem_sop && src_mem_valid && src_mem_ready) begin
-						out_mem_data <= {56'b0, 4'b0, 4'h3, 4'b0, mem_h[3:0], 4'b0, mem_h[7:4], 4'b0, mem_h[11:8], 4'b0, mem_h[15:12], 4'b0, mem_w[3:0], 4'b0, mem_w[7:4], 4'b0, mem_w[11:8], 4'b0, mem_w[15:12]};
+						out_mem_data <= {56'b0, 4'b0, 4'h2, 4'b0, mem_h[3:0], 4'b0, mem_h[7:4], 4'b0, mem_h[11:8], 4'b0, mem_h[15:12], 4'b0, mem_w[3:0], 4'b0, mem_w[7:4], 4'b0, mem_w[11:8], 4'b0, mem_w[15:12]};
 						src_mem_eop <= '1;
 						is_mem_control_gen <= '0;
 					end
@@ -753,6 +789,45 @@ module gmm_fg_detector(
 		.out_channel       ()                                      // (terminated)
 	);
 
+	// DMA Control
+	gmm_dma_control #(
+		.FRAMES_NUM(FRAMES_NUM), // max 8
+		.VIDEO_START_ADDR(VIDEO_START_ADDR),
+		.VIDEO_SPAN_BYTES(VIDEO_SPAN_BYTES), // 1920x1080x(128/8), prefere bank_size of memory
+		.CONTROL_START_ADDR(CONTROL_START_ADDR),
+		.CONTROL_SPAN_BYTES(CONTROL_SPAN_BYTES)
+	) in_dma (
+		.clk, .rst,
+		.is_read('0), .en('1),
+		
+		.ram_write(in_ram_write),
+    	.ram_writedata(in_ram_writedata),
+    	.ram_addr(in_ram_addr),
+    
+    	.pref_write(in_pref_write),
+    	.pref_writedata(in_pref_writedata),
+    	.pref_addr(in_pref_addr)
+	);
+
+	gmm_dma_control #(
+		.FRAMES_NUM(FRAMES_NUM), // max 8
+		.VIDEO_START_ADDR(VIDEO_START_ADDR),
+		.VIDEO_SPAN_BYTES(VIDEO_SPAN_BYTES), // 1920x1080x(128/8), prefere bank_size of memory
+		.CONTROL_START_ADDR(CONTROL_START_ADDR),
+		.CONTROL_SPAN_BYTES(CONTROL_SPAN_BYTES)
+	) out_dma (
+		.clk, .rst,
+		.is_read('1), .en(~is_first_packet),
+		
+		.ram_write(out_ram_write),
+    	.ram_writedata(out_ram_writedata),
+    	.ram_addr(out_ram_addr),
+    
+    	.pref_write(out_pref_write),
+    	.pref_writedata(out_pref_writedata),
+    	.pref_addr(out_pref_addr)
+	);
+
 endmodule : gmm_fg_detector
 
 module video_pipeline (
@@ -835,6 +910,7 @@ module mem_control_cutoff(
             src_valid <= '0;
             src_sop <= '0;
             src_eop <= '0;
+			src_data <= '0;
         end
         else begin
 			if (src_ready) begin

@@ -1,17 +1,17 @@
-Fitter Status : Successful - Mon Oct 07 21:30:13 2019
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 Patches 0.01std SJ Standard Edition
+Fitter Status : Successful - Thu Dec 05 18:50:36 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : DE10_Nano_D8M_DDR3
 Top-level Entity Name : DE10_Nano_D8M_DDR3
 Family : Cyclone V
 Device : 5CSEBA6U23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 27,402 / 41,910 ( 65 % )
-Total registers : 63681
+Logic utilization (in ALMs) : 30,338 / 41,910 ( 72 % )
+Total registers : 57833
 Total pins : 215 / 314 ( 68 % )
 Total virtual pins : 0
-Total block memory bits : 2,141,080 / 5,662,720 ( 38 % )
-Total RAM Blocks : 307 / 553 ( 56 % )
-Total DSP Blocks : 112 / 112 ( 100 % )
+Total block memory bits : 3,823,358 / 5,662,720 ( 68 % )
+Total RAM Blocks : 553 / 553 ( 100 % )
+Total DSP Blocks : 86 / 112 ( 77 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
